@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -84,3 +86,8 @@ gem 'devise'
 gem 'devise_security_extension', git: 'https://github.com/phatworx/devise_security_extension.git'
 gem 'devise_token_auth'
 gem 'rack-cors'
+
+# Role
+gem 'cancan'
+gem 'rolify'
+gem 'simple_form'

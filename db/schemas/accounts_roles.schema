@@ -1,0 +1,9 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+create_table 'accounts_roles', id: false, force: :cascade, options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC' do |t|
+  t.integer 'account_id'
+  t.integer 'role_id'
+
+  t.index ['account_id', 'role_id'],
+          name: 'index_accounts_roles_on_account_id_and_role_id'
+end
