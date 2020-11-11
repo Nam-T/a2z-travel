@@ -1,0 +1,77 @@
+version: 2
+jobs:
+  test:
+    working_directory: ~/a2z-travel
+    docker:
+      - image: circleci/ruby:2.6.0-node
+        environment:
+          PGHOST: localhost
+          MYSQL_USER: root
+          RAILS_ENV: test
+          BUNDLER_VERSION: 2.1.4
+      - image: mysql:5.7
+        environment:
+          DB_CONNECTION: mysql
+          MYSQL_ALLOW_EMPTY_PASSWORD: 1
+          MYSQL_USER: root
+          MYSQL_DB: a2z-travel_test
+          MYSQL_HOST: db
+      - image: redis
+    steps:
+      - checkout
+
+      # Restore Cached Dependencies
+      # - type: cache-restore
+      #   name: Restore bundle cache
+      #   key: your-app-name-{{ checksum "Gemfile.lock" }}
+
+      # Bundle install dependencies
+      - run: gem update --system
+      - run: curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
+      - run: sudo apt-get install -y nodejs
+      - run: node -v
+      - run: sudo apt-get install -y -qq libpq-dev libv8-dev
+      - run: gem install bundler -v 2.1.4
+
+      - restore_cache:
+          keys:
+            # when lock file changes, use increasingly general patterns to restore cache
+            - v1-gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - v1-gem-cache-{{ arch }}-{{ .Branch }}-
+            - v1-gem-cache-{{ arch }}-
+      - run: RAILS_ENV=test bundle install --jobs $(nproc) "${FLAGS[@]}"
+      - save_cache:
+          paths:
+            - ~/.bundle
+          key: v1-gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+
+      # Yarn install
+      # - run: curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+      # - run: echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+      # - run: sudo apt-get update && sudo apt-get install --no-install-recommends yarn
+      # - run: export PATH="$(yarn global bin):$PATH"
+
+      # Cache Dependencies
+      # - type: cache-save
+      #   name: Store bundle cache
+      #   key: your-app-name-{{ checksum "Gemfile.lock" }}
+      #   paths:
+      #     - vendor/bundle
+
+      # Wait for DB
+      # - run: dockerize -wait tcp://localhost:5432 -timeout 1m
+
+      # Rubocop
+      - run: bundle exec rubocop
+
+      # Setup the database
+      - run: RAILS_ENV=test bundle exec rake db:create db:schema:load
+      - run: bundle exec rspec
+      # - run: yarn install --check-files
+      # - run: yarn test
+
+workflows:
+  version: 2
+  setup_and_test:
+    jobs:
+      - test
