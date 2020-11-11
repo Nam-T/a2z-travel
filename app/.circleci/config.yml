@@ -1,9 +1,9 @@
 version: 2
 jobs:
   test:
-    working_directory: ~/job-board
+    working_directory: ~/a2z-travel
     docker:
-      - image: circleci/ruby:2.7.1-node
+      - image: circleci/ruby:2.6.0-node
         environment:
           PGHOST: localhost
           MYSQL_USER: root
