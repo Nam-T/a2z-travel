@@ -1,0 +1,95 @@
+require:
+  - rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 2.4
+  UseCache: true
+  Include:
+    - '**/*.rb'
+    - '**/*.schema'
+  Exclude:
+    - 'public/**/*'
+    - 'tmp/**/*'
+    - 'log/**/*'
+    - 'db/schema.rb'
+    - 'db/migrate/*'
+    - 'db/queries/*'
+    - 'db/schemas/*'
+    - 'db/seeds.rb'
+    - 'vendor/assets/**/*'
+    - 'vendor/bundle/**/*'
+    - ',*/**/*'
+    - 'bin/*'
+
+Rails:
+  Enabled: true
+
+# Need to be enabled later
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'db/schema.rb'
+    - 'spec/factories/**/*.rb'
+    - 'spec/**/*_spec.rb'
+    - 'lib/tasks/task.rake'
+
+Style/HashSyntax:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/RedundantReturn:
+  Enabled: false
+
+Rails/Output:
+  Enabled: false
+
+Metrics/BlockNesting:
+  Enabled: false
+
+Lint/Loop:
+  Enabled: false
+
+Layout/LineLength:
+  Enabled: false
+
+Style/RescueModifier:
+  Enabled: false
+
+Style/Lambda:
+  Exclude:
+    - 'spec/**/*.rb'
+
+# Use only ascii symbols in comments.
+Style/AsciiComments:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Rails/Date:
+  Enabled: false
