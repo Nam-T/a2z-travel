@@ -1,0 +1,2 @@
+module Guider::HomepageHelper
+end
