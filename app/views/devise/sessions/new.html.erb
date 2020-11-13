@@ -1,20 +1,31 @@
-<h2>Log in</h2>
+<div class="login-form">
+  <h1>Sign in<h1/>
+  <%= render "devise/shared/error_messages", resource: resource  %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-group field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-control" %>
+    </div>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
+    <div class="form-group field">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "form-control" %>
+    </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
+    <div>
+      <% if devise_mapping.rememberable? %>
+        <div class="field remember-me">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
 
-<%= render "devise/shared/links" %>
+      <% if devise_mapping.recoverable? %>
+        <%= link_to "Forgot Password", new_password_path(resource_name) %>
+      <% end %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Log in", class: "btn btn-success login-btn" %>
+    </div>
+  <% end %>
+
+</div>
