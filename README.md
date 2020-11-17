@@ -1,24 +1,18 @@
-# README
+# TheTraveler-Server
+- Ruby version > 2.5.0
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+Server của TheTraveler
 
-* Ruby version
+## Installation
 
-* System dependencies
+- git clone https://github.com/TheTraveler2020/thetraveler-server.git
+- bundle install
+- rails db:create
+- bundle exec ridgepole -c cofig/database.yml -E development --apply -f db/schemas/Schemafile
+- bundle exec ridgepole -c cofig/database.yml -E test --apply -f db/schemas/Schemafile
+- rails db:migrate
+- rails s
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+enjoy!
