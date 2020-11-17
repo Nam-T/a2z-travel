@@ -1,22 +1,5 @@
 <div id="login" class="animate w3layouts agileits form">
   <h2 class="w3layouts agileits">Sign In</h2>
-  <%# <form action="#" autocomplete="on" method="post">
-    <label>E-mail</label>
-    <input type="text" Name="Userame" required="">
-    <label>Password</label>
-    <input type="password" Name="Password" required="">
-    <div class="send-button w3layouts agileits">
-      <p><a href="#">Forgot Password?</a></p>
-      <form>
-        <input type="submit" value="SIGN IN">
-      </form>
-      <div class="clear"></div>
-    </div>
-    <p class="change_link w3layouts agileits">
-      Don't have an account? <a href="#toregister" class="to_register">Sign Up!</a>
-    </p>
-    <div class="clear"></div>
-  </form> %>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <label>E-mail</label>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-control", type: "text" %>
@@ -45,6 +28,10 @@
       <div class="clear"></div>
     </div>
   <% end %>
+  <p class="change_link w3layouts agileits">
+    Don't have an account? 
+    <%= link_to "Sign up!", new_registration_path(resource_name) %>
+  </p>
   <div class="social-icons w3layouts agileits">
     <p>OR USE YOUR SOCIAL ACCOUNTS</p>
     <ul>

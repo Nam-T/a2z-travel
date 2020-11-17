@@ -1,25 +1,23 @@
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<div id="register" class="animate w3layouts agileits form">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <h2>Sign up</h2>
+    <label>Email</label>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-control", type: "text" %>
+    <label>Password</label>
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "form-control" %>
+    <label>Password confirmation</label>
+    <%= f.password_field :password_confirmation, autocomplete: "current-password", placeholder: "Password", class: "form-control" %>
+    <div class="send-button w3layouts agileits">
+      <p class="change_link w3layouts agileits">
+        <div>
+			    <%= link_to "Already a member and sign in?", new_session_path(resource_name) %>
+        </div>
+		  </p>
+      <form>
+        <%= f.submit "SIGN UP" %>
+      </form>
+      <div class="clear"></div>
+    </div>
+		<div class="clear"></div>
+  <% end %>
+</div>
