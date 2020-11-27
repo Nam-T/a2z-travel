@@ -9,85 +9,107 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-  <%# <title>Travel Agency Sign In Form A Flat Responsive Widget Template :: W3layouts</title> %>
-
-  <!-- Meta-Tags -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="keywords"
-    content="Travel Agency Sign In Form Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
-  <script
-    type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-  <!-- //Meta-Tags -->
-
-  <!-- Custom-Styleheet-Links -->
-  <%# <link rel="stylesheet" href="css/style.css" 		 type="text/css" media="all">
-		<link rel="stylesheet" href="css/animate-custom.css" type="text/css" media="all"> %>
-  <!-- //Custom-Styleheet-Links -->
-
-  <!-- Fonts -->
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" type="text/css" media="all">
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css" media="all">
-  <!-- //Fonts -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
 </head>
 
-<body>
-  <h1 class="w3layouts agileits">A2Z Travel</h1>
+<body class="sign-in" oncontextmenu="return false;">
 
-  <div class="container w3layouts agileits">
 
-    <div class="content-left w3layouts agileits">
-      <img src="assets/login/background.jpg" alt="W3layouts Agileits">
-      <p>Plan your next dream trip. Select your destination and leave the rest to us.</p>
-      <a class="more w3layouts agileits" href="#">LEARN MORE</a>
-      <div class="list w3layouts agileits">
-        <ul class="w3layouts agileits">
-          <li class="w3layouts agileits"><a href="#">About</a></li>
-          <li class="li2 w3layouts agileits"><a href="#">Terms Of Use</a></li>
-          <li class="w3layouts agileits"><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </div>
+	<div class="wrapper">
 
-    <div class="content-right w3layouts agileits">
-      <section>
-        <div id="container_demo">
-          <a class="hiddenanchor w3layouts agileits" id="tologin"></a>
-          <a class="hiddenanchor w3layouts agileits" id="toregister"></a>
-          <div id="wrapper">
-            <%= yield %>
-            <%# <div id="register" class="animate w3layouts agileits form">
-							<h2>Sign up</h2>
-							<form  action="#" autocomplete="on" method="post">
-								<form action="#" method="post">
-									<label>Name</label>
-									<input type="text" class="name w3layouts agileits" Name="Name" required="">
-									<label>Phone Number</label>
-									<input type="text" class="phone w3layouts agileits" Name="Phone Number" required="">
-									<label>E-mail</label>
-									<input type="text" Name="Email" required="">
-									<label>Password</label>
-									<input type="password" Name="Password" required="">
-									<div class="send-button w3layouts agileits">
-										<form action="#" method="post">
-											<input type="submit" value="SIGN UP">
+	    <div class="sign-in-page">
+		    <div class="signin-popup">
+				<div class="signin-pop">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="cmp-info">
+								<div class="cm-logo">
+                  					<%=image_tag("login-logo.png")%>
+									<p>A2Ztravel, is a global travel platform built as a social network where travel lovers and travelers connect and collaborate remotely
+									</p>
+								</div>
+								<!--cm-logo end-->
+                				<%=image_tag("cm-main-img.png")%>
+							</div>
+							<!--cmp-info end-->
+						</div>
+						<div class="col-lg-6">
+							<div class="login-sec">
+								<ul class="sign-control">
+									<li data-tab="tab-1" class="current"><a href="#" title="">Sign in</a></li>
+									<li data-tab="tab-2"><a href="#" title="">Sign up</a></li>
+								</ul>
+								<div class="sign_in_sec current" id="tab-1">
+
+									<%= yield %>
+									<!--login-resources end-->
+								</div>
+								<!--sign_in_sec end-->
+								<div class="sign_in_sec" id="tab-2">
+									<!--signup-tab end-->
+									<div class="dff-tab current" id="tab-3">
+										<form>
+											<div class="row">
+												<div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input type="text" name="name" placeholder="Full Name">
+														<i class="la la-user"></i>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input type="text" name="country" placeholder="Phone">
+														<i class="la la-globe"></i>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input type="password" name="password" placeholder="Password">
+														<i class="la la-lock"></i>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input type="password" name="repeat-password"
+															placeholder="Repeat Password">
+														<i class="la la-lock"></i>
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd">
+													<div class="checky-sec st2">
+														<div class="fgt-sec">
+															<input type="checkbox" name="cc" id="c2">
+															<label for="c2">
+																<span></span>
+															</label>
+															<small>Yes, I understand and agree to the A2Ztravel Terms &
+																Conditions.</small>
+														</div>
+														<!--fgt-sec end-->
+													</div>
+												</div>
+												<div class="col-lg-12 no-pdd">
+													<button type="submit" value="submit">Sign up</button>
+												</div>
+											</div>
 										</form>
 									</div>
-								</form>
-								<p class="change_link w3layouts agileits">
-									Already a member? <a href="#tologin" class="to_register">Sign In</a>
-								</p>
-								<div class="clear"></div>
-							</form>
-						</div> %>
-            <div class="clear"></div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <div class="clear"></div>
-
-  </div>
+									<!--dff-tab end-->
+								</div>
+							</div>
+							<!--login-sec end-->
+						</div>
+					</div>
+				</div>
+				<!--signin-pop end-->
+			</div>
+			<!--signin-popup end-->
+		</div>
+		<!--sign-in-page end-->
+	</div>
+	<!--theme-layout end-->
 </body>
 
 </html>
