@@ -91,3 +91,6 @@ gem 'rack-cors'
 gem 'cancan'
 gem 'rolify'
 gem 'simple_form'
+
+# Viewe
+gem "font-awesome-rails"
