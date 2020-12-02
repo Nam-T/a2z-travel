@@ -1,2 +1,4 @@
-class Guider::HomepageController < ApplicationController
+class Guider::HomepageController < Guider::GuiderApplicationController
+  def index
+  end
 end

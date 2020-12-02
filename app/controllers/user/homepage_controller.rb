@@ -1,2 +1,4 @@
-class User::HomepageController < ApplicationController
+class User::HomepageController < User::UserApplicationController
+  def index
+  end
 end

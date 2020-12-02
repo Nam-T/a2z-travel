@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: "admin/homepage#index"
+  root to: "role#redirect"
+
+  get 'redirect', to: 'role#redirect'
 
   devise_for :accounts, skip: [:session, :password, :registrations]
   as :account do
@@ -15,5 +17,26 @@ Rails.application.routes.draw do
     put "confirmation", to: "confirmations#update"
     get "sign_up", to: "registrations#new", as: :new_account_registration
     post "sign_up", to: "registrations#create", as: :account_registration
+  end
+
+  resources :admin do
+    scope module: :admin do
+      resources :homepage, controller: 'homepage', only: %i[index] do
+      end
+    end
+  end
+
+  resources :guider do
+    scope module: :guider do
+      resources :homepage, controller: 'homepage', only: %i[index] do
+      end
+    end
+  end
+
+  resources :user do
+    scope module: :user do
+      resources :homepage, controller: 'homepage', only: %i[index] do
+      end
+    end
   end
 end

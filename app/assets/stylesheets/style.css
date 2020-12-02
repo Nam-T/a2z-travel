@@ -604,8 +604,6 @@ nav > ul > li > a:hover {
 .user-account {
 	float: right;
 	width: 110px;
-	border-left: 1px solid #dd3e2b;
-	border-right: 1px solid #dd3e2b;
 	box-sizing: border-box;
 	position: relative;
 }
@@ -1092,6 +1090,11 @@ main {
 	float: left;
 	width: 100%;
 }
+
+.posts-section-blog {
+	margin-top: 8px;
+}
+
 .reviewtext {
 	margin: 0 -20px;
 }
@@ -1100,7 +1103,7 @@ main {
 }
 .post-bar {
 	float: left;
-	width: 96%;
+	width: 100%;
 	background-color: #fff;
 	border-left: 1px solid #e4e4e4;
 	border-right: 1px solid #e4e4e4;
@@ -1112,10 +1115,12 @@ main {
 .post_topbar {
 	float: left;
 	width: 100%;
-	position: relative;
 }
 .rep-post {
 	padding: 0;
+}
+.avt-guider-blog img {
+	width: 8%;
 }
 .usy-dt {
 	float: left;
@@ -1394,8 +1399,6 @@ main {
 .like-com li a i {
 	margin-right: 2px;
 	font-size: 14px;
-	position: relative;
-	top: 2px;
 }
 .like-com li span {
 	color: #ffffff;
@@ -1416,10 +1419,26 @@ main {
 }
 .like-com li .com {
 	position: relative;
-	top: -9px;
 }
 .like-com li .com img {
 	margin-right: 10px;
+}
+
+.blog-content {
+	padding: 12px 8px;
+	display: flex;
+	flex-direction: column;
+}
+
+.blog-content .blog-img {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 8px;
+}
+
+.blog-content .blog-img img {
+	width: 50%;
 }
 
 .job-status-bar > a {
@@ -1852,6 +1871,17 @@ main {
 	border: 2px solid #00ced1;
 	padding: 12px;
 	margin-top: 8px;
+}
+
+.right-sidebar .button-book {
+	border-radius: 18px;
+	background-color: #CC0000 ;
+	padding: 12px;
+	margin-top: 8px;
+	color: #fff;
+	font-weight: 600;
+	text-align: center;
+	cursor: pointer;
 }
 
 .widget {
@@ -2900,6 +2930,7 @@ footer {
 	width: 100%;
 	padding-top: 4px;
 }
+
 .user-tab-sec h3 {
 	color: #000000;
 	font-size: 24px;
@@ -2948,6 +2979,11 @@ footer {
 	width: 100%;
 	margin-bottom: 25px;
 }
+
+.tab-guider {
+	margin-bottom: 0px !important;
+}
+
 .tab-feed ul {
 	float: left;
 	width: 100%;
@@ -2972,6 +3008,18 @@ footer {
 .tab-feed ul li.active span {
 	color: #3399ff;
 }
+
+.tab-feed ul li.active {
+	background-color: inherit;
+	color: #3399ff !important;
+	padding-bottom: 9px;
+	border-bottom: 2px solid #3399ff !important;
+}
+
+.tab-feed ul {
+	border-bottom: 1px solid #e5e5e5;
+}
+
 .tab-feed ul li img {
 	float: none;
 	margin-bottom: 5px;
@@ -3067,11 +3115,12 @@ footer {
 	float: left;
 	width: 100%;
 	background-color: #fff;
-	padding: 30px 20px;
+	padding: 8px;
 	border-left: 1px solid #e4e4e4;
 	border-bottom: 1px solid #e4e4e4;
 	border-right: 1px solid #e4e4e4;
 	margin-bottom: 20px;
+	margin-top: 8px;
 }
 .user-profile-ov h3 {
 	color: #000000;
@@ -3079,6 +3128,11 @@ footer {
 	font-weight: 600;
 	margin-bottom: 20px;
 }
+
+.guider-mg-info h3 {
+	margin-bottom: 0px;
+}
+
 .user-profile-ov h3 a {
 	color: #000000;
 }
@@ -3786,7 +3840,7 @@ a:hover {
 	display: inline-block;
 	padding: 0 12px;
 	color: #fff;
-	height: 35px;
+	height: 38px;
 	line-height: 35px;
 }
 .company-up-info ul li a i {
@@ -3952,7 +4006,6 @@ a:hover {
 .filter-dd form select {
 	width: 100%;
 	height: 30px;
-	background-color: #f2f2f2;
 	padding: 0 10px;
 	color: #b2b2b2;
 	font-size: 12px;
@@ -4613,6 +4666,16 @@ a:hover {
 	border-color: transparent;
 }
 
+.save-stngs ul li .btn-save-setting {
+	background-color: #00DD00;
+	color: #fff;
+	border-color: transparent;
+}
+
+.save-stngs ul li .btn-ban-setting {
+	background-color: #dc3545 !important;
+	color: #fff;
+}
 /* =============== Password Update ============ */
 
 .cp-field {
@@ -4686,6 +4749,7 @@ a:hover {
 }
 .noty-user-img img {
 	width: 100%;
+	border-radius: 50%;
 }
 .notification-info {
 	float: left;
@@ -4980,6 +5044,7 @@ a:hover {
 	font-size: 18px;
 	font-weight: 600;
 }
+
 .usr-mg-info p {
 	color: #686868;
 	font-size: 16px;
@@ -5049,6 +5114,16 @@ a:hover {
 	-o-border-radius: 100px;
 	border-radius: 100px;
 }
+
+.mess-guider-img img {
+	width: 80%;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-ms-border-radius: 100px;
+	-o-border-radius: 100px;
+	border-radius: 100px;
+}
+
 .message-dt {
 	float: left;
 	width: auto;
@@ -5066,6 +5141,17 @@ a:hover {
 	padding-left: 0;
 	padding-right: 85px;
 }
+
+.main-message-box.ta-right .message-dt-custom {
+	padding-left: 0;
+	padding-right: 40px !important;
+}
+
+.main-message-box.ta-right .message- {
+	padding-left: 0;
+	padding-right: 85px;
+}
+
 .main-message-box.ta-right .message-dt > span {
 	float: right;
 	width: auto;
@@ -5131,6 +5217,24 @@ a:hover {
 	height: 604px;
 }
 
+.messages-guider {
+	float: left;
+	width: 100%;
+	height: 300px;
+}
+
+.message-bar-head-guider {
+	float: left;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.95);
+	padding: 8px;
+	border-bottom: 1px solid #eaeaea;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 11;
+}
+
 /* ============== message-send-area ============ */
 
 .message-send-area {
@@ -5144,9 +5248,21 @@ a:hover {
 	float: left;
 	width: 100%;
 }
+
+.message-send-area .button-send {
+	font-size: 26px;
+	color: #3399ff;
+	padding: 12px;
+}
 .mf-field {
-	float: left;
+	display: flex;
 	width: 100%;
+}
+
+.mf-field .icon-chat i {
+	color: #b2b2b2;
+	font-size: 24px;
+	padding: 8px;
 }
 .mf-field input {
 	float: left;
@@ -5252,7 +5368,7 @@ a:hover {
 }
 .usr_img {
 	float: left;
-	width: 60px;
+	width: 80px;
 }
 .usr_img img {
 	width: 100%;
@@ -5300,6 +5416,17 @@ a:hover {
 	margin-right: 0;
 }
 
+.list-history {
+	width: 100%;
+	background-color: #fff;
+	margin-bottom: 16px;
+}
+
+.list-history p, h3{
+	font-weight: 600;
+	padding: 4px;
+}
+
 /* ============= quest-tags ============ */
 
 .quest-tags {
@@ -5334,6 +5461,35 @@ a:hover {
 }
 .pd-right-none {
 	padding-right: 0;
+}
+
+.time-history {
+	color: #b2b2b2;
+	font-size: 14px;
+	position: absolute;
+	bottom: 0px;
+	right: 20px;
+}
+
+.button-ban {
+	position: absolute;
+	top: 0px;
+	right: 20px;
+}
+
+.status-done {
+	font-size: 14px;
+	color: #3366FF;
+}
+
+.status-doing {
+	font-size: 14px;
+	color: #00EE00;
+}
+
+.status-ban {
+	font-size: 14px;
+	color: #FF0000	;
 }
 /* =========== navigation ============ */
 
@@ -5672,12 +5828,37 @@ a:hover {
 
 .wordpressdevlp {
 	background-color: #fff;
+	padding-bottom: 8px;
 }
 .bgclr {
 	background-color: #fff;
 	margin: 10px;
-	border-radius: 18px;
-	border: 2px dashed #48d1cc;
+}
+
+.bgclr .checked {
+	color: #ffff00;
+}
+
+.bgclr .unchecked {
+	color: #cccccc;
+}
+
+.reviewer-avt {
+	width: 12%;
+	height: 50px;
+	padding: 8px;
+}
+.reviewer-avt img {
+	width: 100%;
+	border-radius: 50%;
+}
+
+.reviewer-name {
+	padding: 8px;
+}
+
+.review-schedule {
+	display: flex;
 }
 .cadidatesbtn {
 	position: absolute;
@@ -5709,6 +5890,14 @@ a:hover {
 .wordpressdevlp h2 {
 	font-size: 18px;
 	font-weight: 600;
+}
+
+.review-content {
+	display: none;
+}
+
+.guider-avt {
+	width: 10%;
 }
 .cadidatesbtn i {
 	color: #b2b2b2;
@@ -6032,7 +6221,7 @@ a:hover {
 	padding: 0 !important;
 }
 .paddy {
-	padding: 20px;
+	padding: 8px;
 	float: left;
 }
 .dropdown-menu {
@@ -6640,8 +6829,6 @@ ul#myTab {
 	color: #3399ff;
 }
 #schedule {
-	border: 2px solid #00ced1;
-	border-radius: 18px;
 }
 
 #schedule ul li a {
