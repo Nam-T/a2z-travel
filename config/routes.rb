@@ -37,6 +37,9 @@ Rails.application.routes.draw do
     scope module: :user do
       resources :homepage, controller: 'homepage', only: %i[index] do
       end
+
+      resources :guider, controller: 'guider', only: %i[show] do
+      end
     end
   end
 end
