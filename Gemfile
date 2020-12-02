@@ -94,3 +94,7 @@ gem 'simple_form'
 
 # Viewe
 gem 'font-awesome-rails'
+
+# Image
+gem 'carrierwave'
+gem 'mini_magick'
