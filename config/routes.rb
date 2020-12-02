@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "role#redirect"
 
+  get 'redirect', to: 'role#redirect'
+
   devise_for :accounts, skip: [:session, :password, :registrations]
   as :account do
     get "sign_in", to: "sessions#new", as: :new_account_session

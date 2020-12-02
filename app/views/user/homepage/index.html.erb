@@ -100,7 +100,9 @@
           <div class="user-account-settingss">
             <ul class="us-links">
               <li><a href="setting-account.html" title="">Account Setting</a></li>
-              <li><a href="sign-in.html" title="">Logout</a></li>
+              <li>
+                <%= link_to('Logout', destroy_account_session_path, method: :delete) %>
+              </li>
             </div>
             <!--user-account-settingss end-->
           </div>
@@ -202,7 +204,7 @@
                   <div class="col-lg-4	 col-md-4 col-sm-6 col-12">
                     <div class="company_profile_info">
                       <div class="company-up-info">
-                        <img src="images/avt.png" alt="">
+                        <%=image_tag("tmp/avt.png")%>
                         <h3>Thu Trang</h3>
                         <ul class="social_links">
                           <li><i class="fas fa-home text-secondary"></i> Quê quán: Lào Cai</li>
@@ -218,7 +220,7 @@
                   <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                     <div class="company_profile_info">
                       <div class="company-up-info">
-                        <img src="images/eya.jpg" alt="">
+                        <%=image_tag("tmp/eya.jpg")%>
                         <h3>Ngọc Vân</h3>
                         <ul class="social_links">
                           <li><i class="fas fa-home text-secondary"></i> Quê quán: Lào Cai</li>
@@ -234,7 +236,7 @@
                   <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                     <div class="company_profile_info">
                       <div class="company-up-info">
-                        <img src="images/any.jpg" alt="">
+                        <%=image_tag("tmp/any.jpg")%>
                         <h3>Nam Vũ</h3>
                         <ul class="social_links">
                           <li><i class="fas fa-home text-secondary"></i> Quê quán: Lào Cai</li>
