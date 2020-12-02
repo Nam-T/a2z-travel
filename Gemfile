@@ -93,4 +93,4 @@ gem 'rolify'
 gem 'simple_form'
 
 # Viewe
-gem "font-awesome-rails"
+gem 'font-awesome-rails'

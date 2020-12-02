@@ -1,0 +1,270 @@
+<div class="wrapper">
+  <header>
+    <div class="container">
+      <div class="header-data">
+        <div class="logo">
+          <a href="list-guider.html" title=""><%=image_tag("your-logo.png")%></a>
+        </div>
+        <!--logo end-->
+        <div class="search-bar">
+          <form>
+            <input type="text" name="search" placeholder="Tìm kiếm...">
+            <button type="submit"><i class="la la-search"></i></button>
+          </form>
+        </div>
+        <!--search-bar end-->
+        <nav>
+          <ul>
+            <li>
+              <a href="list-guider.html" title="">
+                <span><i class="fas fa-users"></i></span>
+                Thuê Guider
+              </a>
+            </li>
+            <li>
+              <a href="blog.html" title="">
+                <span><i class="fas fa-blog"></i></span>
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="following.html" title="">
+                <span><i class="fas fa-rss"></i></span>
+                Đang theo dõi
+              </a>
+            </li>
+            <li>
+              <a href="history.html" title="">
+                <span><i class="fas fa-history"></i></span>
+                Lịch sử
+              </a>
+            </li>
+            <li>
+              <a href="#" title="" class="not-box-openm">
+                <span><i class="fas fa-comments"></i></span>
+                Chat
+              </a>
+              <div class="notification-box msg" id="message">
+                <div class="nt-title">
+                  <a href="#" title="">Xóa tất cả</a>
+                </div>
+                <div class="nott-list">
+                  <div class="notfication-details">
+                    <div class="noty-user-img">
+                      <img src="images/any.jpg" alt="">
+                    </div>
+                    <div class="notification-info">
+                      <h3><a href="message-all.html" title="">Nam Vũ</a> </h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                      <span>2 min ago</span>
+                    </div>
+                    <!--notification-info -->
+                  </div>
+                  <div class="notfication-details">
+                    <div class="noty-user-img">
+                      <img src="images/eya.jpg" alt="">
+                    </div>
+                    <div class="notification-info">
+                      <h3><a href="message-all.html" title="">Ngọc Vân</a></h3>
+                      <p>Lorem ipsum dolor sit amet.</p>
+                      <span>2 min ago</span>
+                    </div>
+                    <!--notification-info -->
+                  </div>
+                  <div class="view-all-nots">
+                    <a href="message-all.html" title="">Xem tất cả</a>
+                  </div>
+                </div>
+                <!--nott-list end-->
+              </div>
+              <!--notification-box end-->
+            </li>
+          </ul>
+        </nav><!--nav end-->
+        <div class="menu-btn">
+          <a href="#" title=""><i class="fa fa-bars"></i></a>
+        </div>
+        <!--menu-btn end-->
+        <div class="user-account">
+          <div class="user-info">
+            <img src="images/avt.png" alt="">
+            <a href="#" title="">Ngọc</a>
+            <i class="la la-sort-down"></i>
+          </div>
+          <div class="user-account-settingss">
+            <ul class="us-links">
+              <li><a href="setting-account.html" title="">Account Setting</a></li>
+              <li><a href="sign-in.html" title="">Logout</a></li>
+            </div>
+            <!--user-account-settingss end-->
+          </div>
+        </div>
+        <!--header-data end-->
+      </div>
+    </header>
+    <!--header end-->
+    <section class="companies-info">
+      <div class="container">
+        <div class="company-title">
+          <h3>Thuê Guider</h3>
+        </div>
+        <!--company-title end-->
+        <div class="main-section-data">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="filter-secs">
+                <div class="paddy">
+                  <div class="filter-dd mt-2">
+                    <div class="input-group mb-2">
+                      <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Tìm kiếm..">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="la la-search"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-dd">
+                    <div class="filter-ttl">
+                      <h3>Khu vực</h3>
+                    </div>
+                    <form class="job-tp">
+                      <select>
+                        <option>Tùy chọn</option>
+                        <option>Sapa</option>
+                        <option>Hà Nội</option>
+                        <option>Hải Phòng</option>
+                        <option>Sơn La</option>
+                      </select>
+                      <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </form>
+                  </div>
+                  <div class="filter-dd">
+                    <div class="filter-ttl">
+                      <h3>Giới tính</h3>
+                    </div>
+                    <ul class="avail-checks">
+                      <li>
+                        <input type="radio" name="cc" id="c1">
+                        <label for="c1">
+                          <span></span>
+                        </label>
+                        <small>Nữ</small>
+                      </li>
+                      <li>
+                        <input type="radio" name="cc" id="c2">
+                        <label for="c2">
+                          <span></span>
+                        </label>
+                        <small>Nam</small>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="filter-dd">
+                    <div class="filter-ttl">
+                      <h3>Tuổi</h3>
+                    </div>
+                    <ul class="avail-checks">
+                      <li>
+                        <input type="radio" name="cc" id="c1">
+                        <label for="c1">
+                          <span></span>
+                        </label>
+                        <small>&lt; &#61; 24 tuổi</small>
+                      </li>
+                      <li>
+                        <input type="radio" name="cc" id="c2">
+                        <label for="c2">
+                          <span></span>
+                        </label>
+                        <small>25 tuổi -> 30 tuổi</small>
+                      </li>
+                      <li>
+                        <input type="radio" name="cc" id="c2">
+                        <label for="c2">
+                          <span></span>
+                        </label>
+                        <small>&gt; 30 tuổi</small>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--filter-secs end-->
+            </div>
+            <div class="col-lg-9">
+              <div class="companies-list">
+                <div class="row">
+                  <div class="col-lg-4	 col-md-4 col-sm-6 col-12">
+                    <div class="company_profile_info">
+                      <div class="company-up-info">
+                        <img src="images/avt.png" alt="">
+                        <h3>Thu Trang</h3>
+                        <ul class="social_links">
+                          <li><i class="fas fa-home text-secondary"></i> Quê quán: Lào Cai</li>
+                          <li><i class="fas fa-map-marker-alt text-secondary"></i> Sống tại: Sapa, Lào Cai</li>
+                          <li><i class="fas fa-heart text-secondary"></i> Sở thích: Du lịch, ca hát</li>
+                          <li><i class="fas fa-rss text-secondary"></i> 229 người theo dõi</li>
+                        </ul>
+                      </div>
+                      <a href="guider-profile.html" title="" class="view-more-pro">Trang cá nhân</a>
+                    </div>
+                    <!--company_profile_info end-->
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                    <div class="company_profile_info">
+                      <div class="company-up-info">
+                        <img src="images/eya.jpg" alt="">
+                        <h3>Ngọc Vân</h3>
+                        <ul class="social_links">
+                          <li><i class="fas fa-home text-secondary"></i> Quê quán: Lào Cai</li>
+                          <li><i class="fas fa-map-marker-alt text-secondary"></i> Sống tại: Sapa, Lào Cai</li>
+                          <li><i class="fas fa-heart text-secondary"></i> Sở thích: Du lịch, ca hát</li>
+                          <li><i class="fas fa-rss text-secondary"></i> 229 người theo dõi</li>
+                        </ul>
+                      </div>
+                      <a href="guider-profile.html" title="" class="view-more-pro">Trang cá nhân</a>
+                    </div>
+                    <!--company_profile_info end-->
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                    <div class="company_profile_info">
+                      <div class="company-up-info">
+                        <img src="images/any.jpg" alt="">
+                        <h3>Nam Vũ</h3>
+                        <ul class="social_links">
+                          <li><i class="fas fa-home text-secondary"></i> Quê quán: Lào Cai</li>
+                          <li><i class="fas fa-map-marker-alt text-secondary"></i> Sống tại: Sapa, Lào Cai</li>
+                          <li><i class="fas fa-heart text-secondary"></i> Sở thích: Du lịch, ca hát</li>
+                          <li><i class="fas fa-rss text-secondary"></i> 229 người theo dõi</li>
+                        </ul>
+                      </div>
+                      <a href="guider-profile.html" title="" class="view-more-pro">Trang cá nhân</a>
+                    </div>
+                    <!--company_profile_info end-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--companies-list end-->
+          </div>
+        </div>
+      </div>
+      <!-- main-section-data end-->
+      <div class="process-comm">
+        <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+      </div>
+      <!--process-comm end-->
+    </div>
+  </section>
+  <!--companies-info end-->
+  <footer>
+    <div class="footy-sec mn no-margin">
+      <div class="container">
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+</div>
