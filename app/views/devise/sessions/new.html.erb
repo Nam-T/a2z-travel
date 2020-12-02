@@ -1,46 +1,46 @@
 <h3>Sign in</h3>
-									<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-										<div class="row">
-											<div class="col-lg-12 no-pdd">
-												<div class="sn-field">
-                          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-control", type: "text" %>
-													<i class="la la-user"></i>
-												</div>
-												<!--sn-field end-->
-											</div>
-											<div class="col-lg-12 no-pdd">
-												<div class="sn-field">
-                          <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "form-control" %>
-													<i class="la la-lock"></i>
-												</div>
-											</div>
-											<div class="col-lg-12 no-pdd">
-												<div class="checky-sec">
-													<div class="fgt-sec">
-														<input type="checkbox" name="cc" id="c1">
-                            <% if devise_mapping.rememberable? %>
-                              <%= f.check_box :remember_me %>
-                            <% end %>
-														<label for="c1">
-															<span></span>
-														</label>
-														<small>Remember me</small>
-													</div>
-													<!--fgt-sec end-->
-													<a href="#" title="">Forgot Password?</a>
-												</div>
-											</div>
-											<div class="col-lg-12 no-pdd">
-												<button type="submit" value="submit">Sign in</button>
-											</div>
-										</div>
-									<% end %>
-									<div class="login-resources">
-										<h4>Login With Social Account</h4>
-										<ul>
-											<li><a href="#" title="" class="fb"><i class="fa fa-facebook"></i>Login With
-													Facebook</a></li>
-											<li><a href="#" title="" class="go"><i class="fa fa-google"></i>Login With
-													Google</a></li>
-										</ul>
-									</div>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="row">
+    <div class="col-lg-12 no-pdd">
+      <div class="sn-field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-control", type: "text" %>
+        <i class="la la-user"></i>
+      </div>
+      <!--sn-field end-->
+    </div>
+    <div class="col-lg-12 no-pdd">
+      <div class="sn-field">
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "form-control" %>
+        <i class="la la-lock"></i>
+      </div>
+    </div>
+    <div class="col-lg-12 no-pdd">
+      <div class="checky-sec">
+        <div class="fgt-sec">
+          <input type="checkbox" name="cc" id="c1">
+          <% if devise_mapping.rememberable? %>
+            <%= f.check_box :remember_me %>
+          <% end %>
+          <label for="c1">
+            <span></span>
+          </label>
+          <small>Remember me</small>
+        </div>
+        <!--fgt-sec end-->
+        <a href="#" title="">Forgot Password?</a>
+      </div>
+    </div>
+    <div class="col-lg-12 no-pdd">
+      <button type="submit" value="submit">Sign in</button>
+    </div>
+  </div>
+<% end %>
+<div class="login-resources">
+  <h4>Login With Social Account</h4>
+  <ul>
+    <li><a href="#" title="" class="fb"><i class="fa fa-facebook"></i>Login With
+        Facebook</a></li>
+    <li><a href="#" title="" class="go"><i class="fa fa-google"></i>Login With
+        Google</a></li>
+  </ul>
+</div>
