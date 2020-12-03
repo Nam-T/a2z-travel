@@ -24,7 +24,7 @@
 		margin-bottom: 20px;
 	}
 	.menu-btn {
-		display: block;
+		display: block !important;
 	}
 	header nav ul li span {
 		display: inline-block;
