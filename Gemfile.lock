@@ -129,6 +129,8 @@ GEM
     ffi (1.13.1)
     font-awesome-rails (4.7.0.5)
       railties (>= 3.2, < 6.1)
+    font-awesome-sass (5.15.1)
+      sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     hashdiff (1.0.1)
@@ -358,6 +360,7 @@ DEPENDENCIES
   devise_token_auth
   factory_bot_rails
   font-awesome-rails
+  font-awesome-sass
   jbuilder (~> 2.5)
   jquery-rails
   launchy

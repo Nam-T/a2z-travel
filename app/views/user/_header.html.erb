@@ -15,10 +15,10 @@
       <nav>
         <ul>
           <li>
-            <a href="list-guider.html" title="">
+            <%= link_to(user_homepage_index_path) do %>
               <span><i class="fas fa-users"></i></span>
               Thuê Guider
-            </a>
+            <% end %>
           </li>
           <li>
             <a href="blog.html" title="">
@@ -91,9 +91,9 @@
           <% else %>
             <%=image_tag("guest/guest_man.jpg")%>
           <% end %>
-          <a href="#" title="">
+          <div style="color: #ffffff; font-size: 14px; margin-top: 8px">
             <%= current_account.name.split(' ').last %>
-          </a>
+          </div>
           <i class="la la-sort-down"></i>
         </div>
         <div class="user-account-settingss">

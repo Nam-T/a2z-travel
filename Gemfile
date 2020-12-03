@@ -92,8 +92,9 @@ gem 'cancan'
 gem 'rolify'
 gem 'simple_form'
 
-# Viewe
+# View
 gem 'font-awesome-rails'
+gem 'font-awesome-sass'
 
 # Image
 gem 'carrierwave'
