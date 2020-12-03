@@ -43,6 +43,12 @@ Rails.application.routes.draw do
 
       resources :setting, controller: 'setting', only: %i[index] do
       end
+
+      resources :blog, controller: 'blog', only: %i[index] do
+      end
+
+      resources :follow, controller: 'follow', only: %i[index] do
+      end
     end
   end
 end
