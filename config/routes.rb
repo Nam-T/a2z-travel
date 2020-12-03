@@ -40,6 +40,9 @@ Rails.application.routes.draw do
 
       resources :guider, controller: 'guider', only: %i[show] do
       end
+
+      resources :setting, controller: 'setting', only: %i[index] do
+      end
     end
   end
 end

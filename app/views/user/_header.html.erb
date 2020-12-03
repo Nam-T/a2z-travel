@@ -2,7 +2,7 @@
   <div class="container">
     <div class="header-data">
       <div class="logo">
-        <a href="list-guider.html" title=""><%=image_tag("your-logo.png")%></a>
+        <%= link_to(image_tag("your-logo.png"), user_homepage_index_path) %>
       </div>
       <!--logo end-->
       <div class="search-bar">
@@ -98,9 +98,11 @@
         </div>
         <div class="user-account-settingss">
           <ul class="us-links">
-            <li><a href="setting-account.html" title="">Account Setting</a></li>
             <li>
-              <%= link_to('Logout', destroy_account_session_path, method: :delete) %>
+              <%= link_to("Quản lý tài khoản", user_setting_index_path) %>
+            </li>
+            <li>
+              <%= link_to('Đăng xuất', destroy_account_session_path, method: :delete) %>
             </li>
           </div>
           <!--user-account-settingss end-->
