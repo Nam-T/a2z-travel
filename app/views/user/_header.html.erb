@@ -21,28 +21,28 @@
             <% end %>
           </li>
           <li>
-            <a href="blog.html" title="">
+            <%= link_to(user_blog_index_path) do %>
               <span><i class="fas fa-blog"></i></span>
               Blog
-            </a>
+            <% end %>
           </li>
           <li>
-            <a href="following.html" title="">
+            <%= link_to(user_follow_index_path) do %>
               <span><i class="fas fa-rss"></i></span>
               Đang theo dõi
-            </a>
+            <% end %>
           </li>
           <li>
-            <a href="history.html" title="">
+            <%= link_to(user_history_index_path) do %>
               <span><i class="fas fa-history"></i></span>
               Lịch sử
-            </a>
+            <% end %>
           </li>
           <li>
-            <a href="#" title="" class="not-box-openm">
+            <%= link_to(user_messenger_index_path, class: "not-box-openm") do %>
               <span><i class="fas fa-comments"></i></span>
               Chat
-            </a>
+            <% end %>
             <div class="notification-box msg" id="message">
               <div class="nt-title">
                 <a href="#" title="">Xóa tất cả</a>
@@ -86,8 +86,8 @@
       <!--menu-btn end-->
       <div class="user-account">
         <div class="user-info">
-          <% if current_account.image? %>
-            <%=image_tag("your-logo.png")%>
+          <% if current_account.avatar? %>
+            <%=image_tag(@current_account.avatar.url, alt: 'Image')%>
           <% else %>
             <%=image_tag("guest/guest_man.jpg")%>
           <% end %>

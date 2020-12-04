@@ -41,7 +41,19 @@ Rails.application.routes.draw do
       resources :guider, controller: 'guider', only: %i[show] do
       end
 
-      resources :setting, controller: 'setting', only: %i[index] do
+      resources :setting, controller: 'setting', only: %i[index update] do
+      end
+
+      resources :blog, controller: 'blog', only: %i[index] do
+      end
+
+      resources :follow, controller: 'follow', only: %i[index] do
+      end
+
+      resources :history, controller: 'history', only: %i[index] do
+      end
+
+      resources :messenger, controller: 'messenger', only: %i[index] do
       end
     end
   end
