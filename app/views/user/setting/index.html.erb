@@ -1,104 +1,88 @@
 <div class="wrapper">
   <%= render 'user/header' %>
-    <section class="profile-account-setting">
-      <div class="container">
-        <div class="account-tabs-setting">
-          <div class="row">
-            <div class="col-lg-3">
-              <div class="acc-leftbar">
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                  <a class="nav-item nav-link" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="false"><i class="fas fa-users-cog"></i>Thông tin chung</a>
-                  <a class="nav-item nav-link" id="nav-password-tab" data-toggle="tab" href="#nav-password" role="tab" aria-controls="nav-password" aria-selected="false"><i class="fa fa-lock"></i>Thay đổi mật khẩu</a>
-                </div>
+  <section class="profile-account-setting">
+    <div class="container">
+      <div class="account-tabs-setting">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="acc-leftbar">
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="false"><i class="fas fa-users-cog"></i>Thông tin chung</a>
+                <a class="nav-item nav-link" id="nav-password-tab" data-toggle="tab" href="#nav-password" role="tab" aria-controls="nav-password" aria-selected="false"><i class="fa fa-lock"></i>Thay đổi mật khẩu</a>
               </div>
-              <!--acc-leftbar end-->
             </div>
-            <div class="col-lg-9">
-              <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
-                  <div class="acc-setting">
-                    <h3>Thông tin chung</h3>
-                    <form>
-                      <div class="cp-field">
-                        <h5>Mật khẩu cũ</h5>
-                        <div class="cpp-fiel">
-                          <input type="text" name="old-password" placeholder="Nhập mật khẩu cũ">
-                          <i class="fa fa-lock"></i>
-                        </div>
+            <!--acc-leftbar end-->
+          </div>
+          <div class="col-lg-9">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
+                <div class="acc-setting">
+                  <h3>Thông tin chung</h3>
+                  <%= form_for @current_user, url: user_setting_path(@current_user.id, @current_user.id), html: {:multipart => true} do |f| %>
+                    <div class="cp-field">
+                      <h5>Ảnh đại diện</h5>
+                      <div class="cpp-fiel">
+                        <%= f.file_field :avatar %>
                       </div>
-                      <div class="cp-field">
-                        <h5>Mật khẩu mới</h5>
-                        <div class="cpp-fiel">
-                          <input type="text" name="new-password" placeholder="Nhập mật khẩu mới">
-                          <i class="fa fa-lock"></i>
-                        </div>
-                      </div>
-                      <div class="cp-field">
-                        <h5>Nhập lại mật khẩu</h5>
-                        <div class="cpp-fiel">
-                          <input type="text" name="repeat-password" placeholder="Nhập lại mật khẩu">
-                          <i class="fa fa-lock"></i>
-                        </div>
-                      </div>
-                      <div class="save-stngs pd2">
-                        <ul>
-                          <li><button type="submit" class="btn-save-setting"><i class="fas fa-save"></i> Lưu</button></li>
-                          <li><button type="submit" class="btn-ban-setting"><i class="fas fa-ban"></i> Hủy</button></li>
-                        </ul>
-                      </div>
-                      <!--save-stngs end-->
-                    </form>
-                  </div>
-                  <!--acc-setting end-->
+                    </div>
+                    <div class="save-stngs pd2">
+                      <ul>
+                        <li><button type="submit" class="btn-save-setting"><i class="fas fa-save"></i> Lưu</button></li>
+                        <li><button type="submit" class="btn-ban-setting"><i class="fas fa-ban"></i> Hủy</button></li>
+                      </ul>
+                    </div>
+                  <% end %>
                 </div>
-                <div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab">
-                  <div class="acc-setting">
-                    <h3>Thay đổi mật khẩu</h3>
-                    <form>
-                      <div class="cp-field">
-                        <h5>Mật khẩu cũ</h5>
-                        <div class="cpp-fiel">
-                          <input type="text" name="old-password" placeholder="Nhập mật khẩu cũ">
-                          <i class="fa fa-lock"></i>
-                        </div>
+                <!--acc-setting end-->
+              </div>
+              <div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab">
+                <div class="acc-setting">
+                  <h3>Thay đổi mật khẩu</h3>
+                  <form>
+                    <div class="cp-field">
+                      <h5>Mật khẩu cũ</h5>
+                      <div class="cpp-fiel">
+                        <input type="text" name="old-password" placeholder="Nhập mật khẩu cũ">
+                        <i class="fa fa-lock"></i>
                       </div>
-                      <div class="cp-field">
-                        <h5>Mật khẩu mới</h5>
-                        <div class="cpp-fiel">
-                          <input type="text" name="new-password" placeholder="Nhập mật khẩu mới">
-                          <i class="fa fa-lock"></i>
-                        </div>
+                    </div>
+                    <div class="cp-field">
+                      <h5>Mật khẩu mới</h5>
+                      <div class="cpp-fiel">
+                        <input type="text" name="new-password" placeholder="Nhập mật khẩu mới">
+                        <i class="fa fa-lock"></i>
                       </div>
-                      <div class="cp-field">
-                        <h5>Nhập lại mật khẩu</h5>
-                        <div class="cpp-fiel">
-                          <input type="text" name="repeat-password" placeholder="Nhập lại mật khẩu">
-                          <i class="fa fa-lock"></i>
-                        </div>
+                    </div>
+                    <div class="cp-field">
+                      <h5>Nhập lại mật khẩu</h5>
+                      <div class="cpp-fiel">
+                        <input type="text" name="repeat-password" placeholder="Nhập lại mật khẩu">
+                        <i class="fa fa-lock"></i>
                       </div>
-                      <div class="save-stngs pd2">
-                        <ul>
-                          <li><button type="submit" class="btn-save-setting"><i class="fas fa-save"></i> Lưu</button></li>
-                          <li><button type="submit" class="btn-ban-setting"><i class="fas fa-ban"></i> Hủy</button></li>
-                        </ul>
-                      </div>
-                      <!--save-stngs end-->
-                    </form>
-                  </div>
-                  <!--acc-setting end-->
+                    </div>
+                    <div class="save-stngs pd2">
+                      <ul>
+                        <li><button type="submit" class="btn-save-setting"><i class="fas fa-save"></i> Lưu</button></li>
+                        <li><button type="submit" class="btn-ban-setting"><i class="fas fa-ban"></i> Hủy</button></li>
+                      </ul>
+                    </div>
+                    <!--save-stngs end-->
+                  </form>
                 </div>
+                <!--acc-setting end-->
               </div>
             </div>
           </div>
         </div>
-        <!--account-tabs-setting end-->
       </div>
-    </section>
-    <footer>
-      <div class="footy-sec mn no-margin">
-        <div class="container">
-        </div>
+      <!--account-tabs-setting end-->
+    </div>
+  </section>
+  <footer>
+    <div class="footy-sec mn no-margin">
+      <div class="container">
       </div>
-    </footer>
-  </div>
-  <!--theme-layout end-->
+    </div>
+  </footer>
+</div>
+<!--theme-layout end-->

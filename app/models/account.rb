@@ -7,7 +7,7 @@ class Account < ApplicationRecord
 
   validate :roles_valid
 
-  mount_uploader :image, ImageUploader
+  mount_uploader :avatar, AvatarUploader
 
   private
 

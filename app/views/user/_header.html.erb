@@ -86,8 +86,8 @@
       <!--menu-btn end-->
       <div class="user-account">
         <div class="user-info">
-          <% if current_account.image? %>
-            <%=image_tag("your-logo.png")%>
+          <% if current_account.avatar? %>
+            <%=image_tag(@current_account.avatar.url, alt: 'Image')%>
           <% else %>
             <%=image_tag("guest/guest_man.jpg")%>
           <% end %>
