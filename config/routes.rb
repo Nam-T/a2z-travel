@@ -23,6 +23,9 @@ Rails.application.routes.draw do
     scope module: :admin do
       resources :homepage, controller: 'homepage', only: %i[index] do
       end
+
+      resources :setting, controller: 'setting', only: %i[index update] do
+      end
     end
   end
 

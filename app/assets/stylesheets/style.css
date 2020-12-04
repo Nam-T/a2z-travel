@@ -3774,14 +3774,35 @@ a:hover {
 	float: left;
 	width: 100%;
 	margin-bottom: 20px;
-	padding: 0 15px;
+	padding: 8px;
 }
 .company-title h3 {
 	color: #000000;
 	font-size: 20px;
 	font-weight: 600;
-	background-color: #fff;
 	padding: 10px 15px;
+}
+
+.company-title{
+	display: flex;
+	justify-content: space-between;
+	background-color: #fff;
+}
+
+.title-table {
+	display: flex;
+	justify-content: space-between;
+	padding: 8px;
+}
+
+.title-table h3{
+	color: #000000;
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.title-table button {
+	font-size: 13px;
 }
 
 .companies-list {
@@ -4609,6 +4630,15 @@ a:hover {
 	border-bottom: 1px solid #e5e5e5;
 	padding: 17px 20px;
 }
+
+.acc-setting table thead th {
+	padding: 18px;
+}
+
+.acc-setting table tbody tr:nth-child(even) {
+	background: #EEEEEE
+}
+
 .notbar {
 	float: left;
 	width: 100%;
