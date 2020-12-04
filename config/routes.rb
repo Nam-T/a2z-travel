@@ -49,6 +49,12 @@ Rails.application.routes.draw do
 
       resources :follow, controller: 'follow', only: %i[index] do
       end
+
+      resources :history, controller: 'history', only: %i[index] do
+      end
+
+      resources :messenger, controller: 'messenger', only: %i[index] do
+      end
     end
   end
 end
