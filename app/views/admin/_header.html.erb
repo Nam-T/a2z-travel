@@ -1,0 +1,44 @@
+<header>
+  <div class="container">
+    <div class="header-data">
+      <div class="logo">
+        <%= link_to(image_tag("your-logo.png"), admin_homepage_index_path) %>
+      </div>
+      <!--logo end-->
+      <nav>
+        <ul>
+        </ul>
+      </nav>
+      <!--nav end-->
+      <div class="menu-btn">
+        <a href="#" title=""><i class="fa fa-bars"></i></a>
+      </div>
+      <!--menu-btn end-->
+      <div class="user-account">
+        <div class="user-info">
+          <% if current_account.avatar? %>
+            <%=image_tag(@current_account.avatar.url, alt: 'Image')%>
+          <% else %>
+            <%=image_tag("guest/guest_man.jpg")%>
+          <% end %>
+          <div style="color: #ffffff; font-size: 14px; margin-top: 8px">
+            <%= current_account.name.split(' ').last %>
+          </div>
+          <i class="la la-sort-down"></i>
+        </div>
+        <div class="user-account-settingss">
+          <ul class="us-links">
+            <li>
+              <%= link_to("Quản lý tài khoản", admin_setting_index_path) %>
+            </li>
+            <li>
+              <%= link_to('Đăng xuất', destroy_account_session_path, method: :delete) %>
+            </li>
+          </div>
+          <!--user-account-settingss end-->
+        </div>
+      </div>
+      <!--header-data end-->
+    </div>
+  </header>
+  <!--header end-->

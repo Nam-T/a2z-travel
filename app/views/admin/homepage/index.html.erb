@@ -1,1 +1,263 @@
-<h1>Admin index</h1>
+<div class="wrapper">
+  <%= render 'admin/header' %>
+    <main>
+      <div class="main-section">
+        <div class="container">
+          <div class="company-title">
+            <h3>Quản lý</h3>
+            <div class="search-bar" style="margin: 0px">
+              <form>
+                <input class="border" type="text" name="search" placeholder="Tìm kiếm...">
+                <button type="submit" class="border"><i class="la la-search"></i></button>
+              </form>
+            </div>
+            <!--search-bar end-->
+          </div>
+          <div class="main-section-data">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="acc-leftbar">
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link" id="nav-admin-tab" data-toggle="tab" href="#nav-admin" role="tab" aria-controls="nav-admin" aria-selected="false"><i class="fas fa-user-shield"></i>Quản lý Admin</a>
+                    <a class="nav-item nav-link" id="nav-guider-tab" data-toggle="tab" href="#nav-guider" role="tab" aria-controls="nav-guider" aria-selected="false"><i class="fas fa-user-tie"></i></i>Quản lý Guider</a>
+                  <a class="nav-item nav-link" id="nav-user-tab" data-toggle="tab" href="#nav-user" role="tab" aria-controls="nav-user" aria-selected="false"><i class="fas fa-users"></i>Quản lý User</a>
+                  <a class="nav-item nav-link" id="nav-request-tab" data-toggle="tab" href="#nav-request" role="tab" aria-controls="nav-request" aria-selected="false"><i class="fas fa-tasks"></i> Yêu cầu phê duyệt</a>
+                </div>
+              </div>
+              <!--acc-leftbar end-->
+            </div>
+            <div class="col-lg-9">
+              <div class="tab-content" id="nav-tabContent">
+                <!-- Quản lý Admin -->
+                <div class="tab-pane fade show active" id="nav-admin" role="tabpanel" aria-labelledby="nav-admin-tab">
+                  <div class="acc-setting">
+                    <div class="title-table">
+                      <h3>Quản lý Admin</h3>
+                      <button class="btn btn-primary" type="button">Thêm mới</button>
+                    </div>
+                    <table class="table mb-0">
+                      <!--Table head-->
+                      <thead style="background-color: #DDDDDD;">
+                        <tr class="font-weight-bold  text-center">
+                          <th>STT</th>
+                          <th>Tài khoản</th>
+                          <th>Email</th>
+                          <th>Ngày sinh</th>
+                          <th>Địa chỉ</th>
+                          <th>Chức danh</th>
+                          <th>Thao tác</th>
+                        </tr>
+                      </thead>
+                      <!--Table body-->
+                      <tbody>
+                        <tr>
+                          <td scope="row"  class="text-center">1</th>
+                          <td>namt</td>
+                          <td>namthp@gmail.com</td>
+                          <td>20/04/1999</td>
+                          <td>Hải Phòng</td>
+                          <td class="text-center">Admin</td>
+                          <td class="action-account text-center">
+                            <i class="fas fa-edit text-success p-1"></i>
+                            <i class="fas fa-trash-alt text-danger p-1"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td scope="row"  class="text-center">2</th>
+                          <td>namt</td>
+                          <td>namthp@gmail.com</td>
+                          <td>20/04/1999</td>
+                          <td>Hải Phòng</td>
+                          <td class="text-center">Admin</td>
+                          <td class="action-account text-center">
+                            <i class="fas fa-edit text-success p-1"></i>
+                            <i class="fas fa-trash-alt text-danger p-1"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td scope="row"  class="text-center">3</th>
+                          <td>namt</td>
+                          <td>namthp@gmail.com</td>
+                          <td>20/04/1999</td>
+                          <td>Hải Phòng</td>
+                          <td class="text-center">Admin</td>
+                          <td class="action-account text-center">
+                            <i class="fas fa-edit text-success p-1"></i>
+                            <i class="fas fa-trash-alt text-danger p-1"></i>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--acc-setting end-->
+                </div>
+                <!-- Quản lý guider -->
+                <div class="tab-pane fade" id="nav-guider" role="tabpanel" aria-labelledby="nav-guider-tab">
+                  <div class="acc-setting">
+                    <div class="title-table">
+                      <h3>Quản lý Guider</h3>
+                      <button class="btn btn-primary" type="button">Thêm mới</button>
+                    </div>
+                    <table class="table mb-0">
+                      <!--Table head-->
+                      <thead style="background-color: #DDDDDD;">
+                        <tr class="font-weight-bold  text-center">
+                          <th>STT</th>
+                          <th>Tài khoản</th>
+                          <th>Email</th>
+                          <th>Ngày sinh</th>
+                          <th>Địa chỉ</th>
+                          <th>Chức danh</th>
+                          <th>Thao tác</th>
+                        </tr>
+                      </thead>
+                      <!--Table body-->
+                      <tbody>
+                        <tr>
+                          <td scope="row"  class="text-center">1</th>
+                          <td>namt</td>
+                          <td>namthp@gmail.com</td>
+                          <td>20/04/1999</td>
+                          <td>Hải Phòng</td>
+                          <td class="text-center">Admin</td>
+                          <td class="action-account text-center">
+                            <i class="fas fa-edit text-success p-1"></i>
+                            <i class="fas fa-trash-alt text-danger p-1"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td scope="row"  class="text-center">2</th>
+                          <td>namt</td>
+                          <td>namthp@gmail.com</td>
+                          <td>20/04/1999</td>
+                          <td>Hải Phòng</td>
+                          <td class="text-center">Admin</td>
+                          <td class="action-account text-center">
+                            <i class="fas fa-edit text-success p-1"></i>
+                            <i class="fas fa-trash-alt text-danger p-1"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td scope="row"  class="text-center">3</th>
+                          <td>namt</td>
+                          <td>namthp@gmail.com</td>
+                          <td>20/04/1999</td>
+                          <td>Hải Phòng</td>
+                          <td class="text-center">Admin</td>
+                          <td class="action-account text-center">
+                            <i class="fas fa-edit text-success p-1"></i>
+                            <i class="fas fa-trash-alt text-danger p-1"></i>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--acc-setting end-->
+                </div>
+                <!-- Quản lý user -->
+                <div class="tab-pane fade" id="nav-user" role="tabpanel" aria-labelledby="nav-user-tab">
+                  <div class="acc-setting">
+                    <div class="title-table">
+                      <h3>Quản lý User</h3>
+                      <button class="btn btn-primary" type="button">Thêm mới</button>
+                    </div>
+                    <table class="table mb-0">
+                      <!--Table head-->
+                      <thead style="background-color: #DDDDDD;">
+                        <tr class="font-weight-bold  text-center">
+                          <th>STT</th>
+                          <th>Tài khoản</th>
+                          <th>Email</th>
+                          <th>Ngày sinh</th>
+                          <th>Địa chỉ</th>
+                          <th>Chức danh</th>
+                          <th>Thao tác</th>
+                        </tr>
+                      </thead>
+                      <!--Table body-->
+                      <tbody>
+                        <tr>
+                          <td scope="row"  class="text-center">1</th>
+                          <td>namt</td>
+                          <td>namthp@gmail.com</td>
+                          <td>20/04/1999</td>
+                          <td>Hải Phòng</td>
+                          <td class="text-center">Admin</td>
+                          <td class="action-account text-center">
+                            <i class="fas fa-edit text-success p-1"></i>
+                            <i class="fas fa-trash-alt text-danger p-1"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td scope="row"  class="text-center">2</th>
+                          <td>namt</td>
+                          <td>namthp@gmail.com</td>
+                          <td>20/04/1999</td>
+                          <td>Hải Phòng</td>
+                          <td class="text-center">Admin</td>
+                          <td class="action-account text-center">
+                            <i class="fas fa-edit text-success p-1"></i>
+                            <i class="fas fa-trash-alt text-danger p-1"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td scope="row"  class="text-center">3</th>
+                          <td>namt</td>
+                          <td>namthp@gmail.com</td>
+                          <td>20/04/1999</td>
+                          <td>Hải Phòng</td>
+                          <td class="text-center">Admin</td>
+                          <td class="action-account text-center">
+                            <i class="fas fa-edit text-success p-1"></i>
+                            <i class="fas fa-trash-alt text-danger p-1"></i>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--acc-setting end-->
+                </div>
+                <!-- Yêu cầu phê duyệt -->
+                <div class="tab-pane fade" id="nav-request" role="tabpanel" aria-labelledby="nav-request-tab">
+                  <div class="acc-setting">
+                    <div class="title-table">
+                      <h3>Yêu cầu phê duyệt</h3>
+                    </div>
+                    <div style="border-top: 1px solid #e5e5e5">
+                      <div class="forum-questions">
+                        <div class="usr-question">
+                          <div class="usr_quest">
+                            <h3>Lộ trình guider này không đúng như đã trao đổi, đề nghị admin xem xét và có câu trả lời trong thời gian sớm nhất</h3>
+                            <a href="url">Link guider</a>
+                          </div>
+                          <!--usr_quest end-->
+                          <span class="quest-posted-time"><i class="fa fa-clock-o"></i>3 min ago</span>
+                        </div>
+                        <!--usr-question end-->
+                      </div>
+                      <!--forum-questions end-->
+                      <nav aria-label="Page navigation example" class="full-pagi">
+                        <ul class="pagination">
+                          <li class="page-item"><a class="page-link pvr" href="#">Previous</a></li>
+                          <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">4</a></li>
+                          <li class="page-item"><a class="page-link" href="#">5</a></li>
+                          <li class="page-item"><a class="page-link" href="#">6</a></li>
+                          <li class="page-item"><a class="page-link pvr" href="#">Next</a></li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                  <!--acc-setting end-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- main-section-data end-->
+      </div>
+    </div>
+  </main>
+</div>
