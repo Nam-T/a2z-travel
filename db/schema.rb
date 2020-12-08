@@ -62,6 +62,16 @@ ActiveRecord::Schema.define(version: 0) do
     t.index ["account_id", "role_id"], name: "index_accounts_roles_on_account_id_and_role_id"
   end
 
+  create_table "follows", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "guider_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["guider_id"], name: "index_relationships_on_guider_id"
+    t.index ["guider_id"], name: "index_relationships_on_user_id_and_guider_id", unique: true
+    t.index ["user_id"], name: "index_relationships_on_user_id"
+  end
+
   create_table "journey_segments", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "departure"
     t.string "arrival"

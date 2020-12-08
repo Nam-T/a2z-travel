@@ -7,9 +7,13 @@
       </div>
       <!--company-title end-->
       <div class="companies-list">
-        <div class="row">
-          
-        </div>
+        <% @guiders.each_slice(4) do |guider_list| %>
+          <div class="row">
+            <% guider_list.each do |guider| %>
+              <%= render 'user/follow/guider_info', guider: guider %>
+            <% end %>
+          </div>
+        <% end %>
       </div>
       <!--companies-list end-->
       <div class="process-comm">

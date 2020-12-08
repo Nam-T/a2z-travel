@@ -1,5 +1,6 @@
 require 'accounts_roles.schema'
 require 'accounts.schema'
+require 'follows.schema'
 require 'journey_segments.schema'
 require 'journeys.schema'
 require 'profiles.schema'
