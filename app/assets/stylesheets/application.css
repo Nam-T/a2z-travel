@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require tempusdominus-bootstrap-4
+ *= require jquery-ui
  */
  @import "bootstrap";
  @import "font-awesome-sprockets";

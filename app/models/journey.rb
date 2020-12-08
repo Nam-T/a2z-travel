@@ -9,7 +9,7 @@ class Journey < ApplicationRecord
   validate :roles_valid
 
   belongs_to :guider, -> { includes(:roles).where(roles: { name: 'guider' }) }, class_name: 'Account', foreign_key: 'guider_id'
-  has_many   :journey_segment, dependent: :destroy
+  has_many   :journey_segments, dependent: :destroy
 
   private
 

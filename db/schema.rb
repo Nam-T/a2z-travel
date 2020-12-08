@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.integer "stt"
     t.integer "spend_time"
     t.integer "journey_id"
+    t.text "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

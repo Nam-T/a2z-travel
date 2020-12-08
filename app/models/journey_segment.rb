@@ -4,7 +4,8 @@ class JourneySegment < ApplicationRecord
   # t.integer  'stt'
   # t.integer  'spend_time'
   # t.integer  'journey_id'
+  # t.text     'content'
 
   belongs_to :journey
-  has_many   :tour_image, dependent: :destroy
+  has_many   :tour_images, dependent: :destroy
 end

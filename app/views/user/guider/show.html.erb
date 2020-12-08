@@ -72,7 +72,7 @@
                   <div class="tab-content">
                     <div class="tab-pane fade show active" id="mange" role="tabpanel" aria-labelledby="mange-tab">
                       <div class="posts-bar">
-                        <%= render 'user/guider/tour' %>
+                        <%= render 'user/guider/tour', journey: @guider.journeys.first %>
                       </div>
                     </div>
                   </div>
@@ -91,7 +91,7 @@
                       </div>
                       <div class="blog-content">
                         <div class="blog-img">
-                          <%=image_tag("seeds/blog/sapa1.jpg")%>
+                          <%=image_tag("seeds/tour/sapa1.jpg")%>
                         </div>
                         <p>Sapa không có những khung trời rộng lớn, không có những vùng đất khiến người lữ khách mỏi gối chùng chân. Vẻ đẹp của Sapa được giữ gìn trọn vẹn bằng những bản làng bình yên nằm ở giữa lưng đồi. Những đồng lúa nương xanh ngát, những cánh rừng hoa ban, hoa mận trắng xóa. Có mùi của đất mẹ lẫn vào trong mùi khói bếp thơm nồng. Những điều mang tên giản dị của vùng đất ấy đã khiến tất cả mọi thứ thuộc về Sapa trở nên đẹp đến vô cùng.</p>
                       </div>
@@ -118,7 +118,7 @@
                       </div>
                       <div class="blog-content">
                         <div class="blog-img">
-                          <%=image_tag("seeds/blog/sapa2.jpg")%>
+                          <%=image_tag("seeds/tour/sapa2.jpg")%>
                         </div>
                         <p>Sapa không có những khung trời rộng lớn, không có những vùng đất khiến người lữ khách mỏi gối chùng chân. Vẻ đẹp của Sapa được giữ gìn trọn vẹn bằng những bản làng bình yên nằm ở giữa lưng đồi. Những đồng lúa nương xanh ngát, những cánh rừng hoa ban, hoa mận trắng xóa. Có mùi của đất mẹ lẫn vào trong mùi khói bếp thơm nồng. Những điều mang tên giản dị của vùng đất ấy đã khiến tất cả mọi thứ thuộc về Sapa trở nên đẹp đến vô cùng.</p>
                       </div>
@@ -150,54 +150,9 @@
             </div>
             <div class="col-lg-3">
               <div class="right-sidebar">
-                <div class="schedule-title">Thông tin lộ trình</div>
-                <div class="schedule-detail">
-                  <div class="top-detail">
-                    <p>Lộ trình 1</p>
-                    <p>Giá tiền: 200.000đ</p>
-                  </div>
-                  <div class="middle-detail">
-                    <p>Thời gian: 2 ngày</p>
-                    <div>
-                      <ul>
-                        <li class="stage-item">
-                          <div class="stage-line">
-                            <div class="stage-circle"></div>
-                          </div>
-                          <div class="stage-detail">
-                            <p>Nhà thờ đá Sapa</p>
-                            <p>Thời gian: 2 tiếng</p>
-                            <%=image_tag("seeds/blog/sapa1.jpg")%>
-                          </div>
-                        </li>
-                        <li class="stage-item">
-                          <div class="stage-line">
-                            <div class="stage-circle"></div>
-                          </div>
-                          <div class="stage-detail">
-                            <p>Thung lũng Mường Hoa</p>
-                            <p>Thời gian: 1 tiếng</p>
-                            <%=image_tag("seeds/blog/sapa2.jpg")%>
-                          </div>
-                        </li>
-                        <li class="stage-item">
-                          <div class="stage-line">
-                            <div class="stage-circle"></div>
-                          </div>
-                          <div class="stage-detail">
-                            <p>Chợ đêm Sapa</p>
-                            <p>Thời gian: 2 tiếng</p>
-                            <%=image_tag("seeds/blog/sapa3.jpg")%>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="free-time">
-                </div>
-                <div class="button-book" >
-                  Book
+                <div class="post-bar">
+                  <div>Chọn ngày khởi hành</div>
+                  <input class="datepicker" name="prova" data-format="dd/MM/yy hh:mm"/>
                 </div>
               </div>
               <!--right-sidebar end-->

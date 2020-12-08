@@ -1,8 +1,10 @@
-<h3>Thung lũng Mường Hoa</h3>
-<h3>Thời gian: 2 tiếng</h3>
+<h3><%= journey_segment.arrival %></h3>
+<h3>Thời gian: <%= journey_segment.spend_time %></h3>
 <div class="blog-content">
   <div class="blog-img">
-    <%=image_tag("seeds/blog/sapa2.jpg")%>
+    <% if journey_segment.tour_images.present? %>
+      <%=image_tag(journey_segment.tour_images.first.image.url, alt: 'Image')%>
+    <% end %>
   </div>
-  <p>Sapa không có những khung trời rộng lớn, không có những vùng đất khiến người lữ khách mỏi gối chùng chân. Vẻ đẹp của Sapa được giữ gìn trọn vẹn bằng những bản làng bình yên nằm ở giữa lưng đồi. Những đồng lúa nương xanh ngát, những cánh rừng hoa ban, hoa mận trắng xóa. Có mùi của đất mẹ lẫn vào trong mùi khói bếp thơm nồng. Những điều mang tên giản dị của vùng đất ấy đã khiến tất cả mọi thứ thuộc về Sapa trở nên đẹp đến vô cùng.</p>
+  <p><%= journey_segment.content %></p>
 </div>

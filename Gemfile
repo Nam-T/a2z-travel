@@ -99,3 +99,9 @@ gem 'font-awesome-sass'
 # Image
 gem 'carrierwave'
 gem 'mini_magick'
+
+# Data-picker
+gem 'momentjs-rails'
+gem 'bootstrap-sass'
+gem 'bootstrap4-datetime-picker-rails'
+gem 'jquery-ui-rails'

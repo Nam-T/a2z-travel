@@ -1,11 +1,13 @@
 <div class="post-bar">
   <div class="wordpressdevlp">
     <a href="">
-      <h2>Lộ trình 1</h2>
+      <h2><%= journey.name %></h2>
     </a>
-    <p><i class="la la-clock-o"></i>Thời gian 2 ngày 1 đêm</p>
+    <p><i class="la la-clock-o"></i>Thời gian: <%= journey.total_time %></p>
   </div>
-  <%= render 'user/guider/tour_segment' %>
+  <% journey.journey_segments.order(stt: :asc).each do |journey_segment| %>
+    <%= render 'user/guider/tour_segment', journey_segment: journey_segment %>
+  <% end %>
   <div class="row no-gutters job-status-bar">
     <div class="col-md-6 col-sm-12">
       <i class="fas fa-star checked"></i>

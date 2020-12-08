@@ -1,9 +1,5 @@
 class TourImage < ApplicationRecord
-  # t.string   'departure'
-  # t.string   'arrival'
-  # t.integer  'stt'
-  # t.integer  'spend_time'
-  # t.integer  'journey_id'
+  # t.string   'image'
 
   mount_uploader :image, AvatarUploader
 
