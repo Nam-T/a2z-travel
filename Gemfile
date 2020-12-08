@@ -95,6 +95,7 @@ gem 'simple_form'
 # View
 gem 'font-awesome-rails'
 gem 'font-awesome-sass'
+gem 'font_awesome5_rails'
 
 # Image
 gem 'carrierwave'

@@ -22,3 +22,4 @@
 //= require moment-timezone-with-data
 //= require tempusdominus-bootstrap-4
 //= require jquery-ui
+//= require font_awesome5

@@ -27,7 +27,7 @@
                       Theo dõi
                     </button>
                     <button type="button" class="btn btn-light border mt-2">
-                      <i class="fas fa-rss text-secondary"></i>
+                      <i class="fab fa-facebook-messenger"></i>
                       Nhắn tin
                     </button>
                   </div>
@@ -69,7 +69,7 @@
                 <div class="product-feed-tab current" id="schedule">
                   <div class="tab-content">
                     <div class="tab-pane fade show active" id="mange" role="tabpanel" aria-labelledby="mange-tab">
-                      <div class="posts-bar">
+                      <div class="posts-section posts-section-blog">
                         <%= render 'user/guider/tour', journey: @guider.journeys.first %>
                       </div>
                     </div>
@@ -150,25 +150,25 @@
               <div class="right-sidebar">
                 <div class="post-bar">
                   <div style="display: flex; justify-content: space-between;">
-                    <div>Ngày xuất phát</div>
-                    <input class="datepicker" data-format="dd/MM/yy" style="width: 90px; text-align: center"/>
+                    <div style="line-height: 28px;">Ngày xuất phát</div>
+                    <input class="datepicker" data-format="dd/MM/yy" style="width: 90px; text-align: center;"/>
                   </div>
-                  <div style="display: flex; justify-content: space-between;">
+                  <div style="display: flex; justify-content: space-between; margin-top: 5px;">
                     <div style="display: flex;">
-                      <h1 style="margin-right: 5px">2</h1>
-                      <h2>Người lớn</h2>
+                      <h1 style="margin-right: 5px; line-height: 28px;">2</h1>
+                      <h2 style="line-height: 28px;">Người lớn</h2>
                     </div>
-                    <div>
-                      <button class="btn number-button minus-adult btn-general">
+                    <div style="width: 90px; display: flex; justify-content: inherit;">
+                      <button class="btn number-button minus-adult btn-general minus">
                         <i class="fa fa-minus"></i>
                       </button>
-                      <button class="btn number-button minus-adult btn-general">
+                      <button class="btn number-button minus-adult btn-general minus">
                         <i class="fa fa-plus"></i>
                       </button>
                     </div>
                   </div>
-                  <div style="display: flex; justify-content: space-between;">
-                    <div>Ngày xuất phát</div>
+                  <div style="margin-top: 5px;">
+                    <button class="btn btn-flat btn-action btn-md btn-block requestButton btn-submit">Xem giá</button>
                   </div>
                 </div>
               </div>

@@ -55,10 +55,17 @@
     border: none;
 
     .ui-datepicker-title {
+      display: flex;
+      justify-content: space-around;
       select {
         height: 25px !important;
         background-color: #ffffff;
       }
     }
   }
+}
+
+input.datepicker {
+  border: 1px solid #7b7777;
+  border-radius: .25rem;
 }
