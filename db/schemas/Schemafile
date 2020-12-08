@@ -1,3 +1,4 @@
 require 'accounts_roles.schema'
 require 'accounts.schema'
+require 'journeys.schema'
 require 'roles.schema'

@@ -1,0 +1,12 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+create_table 'journeys', id: :integer, force: :cascade, options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC' do |t|
+  t.string   'name'
+  t.integer  'max_member'
+  t.integer  'min_member'
+  t.integer  'bill_exam'
+  t.integer  'total_time'
+  t.integer  'guider_id'
+  t.datetime 'created_at'
+  t.datetime 'updated_at'
+end

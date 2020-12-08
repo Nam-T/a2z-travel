@@ -13,7 +13,11 @@
                 <div class="main-left-sidebar">
                   <div class="user_profile">
                     <div class="user-pro-img">
-                      <%=image_tag("seeds/avatar/avt.png")%>
+                      <% if @guider.avatar? %>
+                        <%=image_tag(@guider.avatar.url, alt: 'Image')%>
+                      <% else %>
+                        <%=image_tag("guest/guest_man.jpg")%>
+                      <% end %>
                     </div>
                     <!--user-pro-img end-->
                     <div class="name-guider">

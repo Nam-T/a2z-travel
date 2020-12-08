@@ -5,7 +5,8 @@ admin = Account.create(
   password: '123456',
   password_confirmation: '123456',
   confirmed_at: Date.today,
-  uid: 'email'
+  uid: 'email',
+  avatar: Rack::Test::UploadedFile.new(File.open(File.join(Rails.root, 'app/assets/images/seeds/avatar/ngoc-van.jpg')))
 )
 admin.add_role :admin
 
@@ -15,7 +16,8 @@ user = Account.create(
   password: '123456',
   password_confirmation: '123456',
   confirmed_at: Date.today,
-  uid: 'email'
+  uid: 'email',
+  avatar: Rack::Test::UploadedFile.new(File.open(File.join(Rails.root, 'app/assets/images/seeds/avatar/thieu-nam.jpg')))
 )
 user.add_role :user
 
@@ -25,6 +27,7 @@ guider = Account.create(
   password: '123456',
   password_confirmation: '123456',
   confirmed_at: Date.today,
-  uid: 'email'
+  uid: 'email',
+  avatar: Rack::Test::UploadedFile.new(File.open(File.join(Rails.root, 'app/assets/images/seeds/avatar/tuanngoc.jpg')))
 )
 guider.add_role :guider
