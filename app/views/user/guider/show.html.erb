@@ -21,18 +21,22 @@
                   </div>
                   <!--user-pro-img end-->
                   <div class="name-guider">
-                    <h3>Thu Trang</h3>
+                    <h3><%= @guider.name %></h3>
                     <button type="button" class="btn btn-light border mt-2">
                       <i class="fas fa-rss text-secondary"></i>
                       Theo dõi
                     </button>
+                    <button type="button" class="btn btn-light border mt-2">
+                      <i class="fas fa-rss text-secondary"></i>
+                      Nhắn tin
+                    </button>
                   </div>
                   <ul class="social_links">
-                    <li><i class="fas fa-birthday-cake text-secondary"></i> Ngày sinh: 20/04/1999</li>
-                    <li><i class="fas fa-home text-secondary"></i> Quê quán: Lào Cai</li>
-                    <li><i class="fas fa-map-marker-alt text-secondary"></i> Sống tại: Sapa, Lào Cai</li>
-                    <li><i class="fas fa-suitcase text-secondary"></i> Làm việc: Lào Cai</li>
-                    <li><i class="fas fa-heart text-secondary"></i> Sở thích: Du lịch, ca hát</li>
+                    <li><i class="fas fa-birthday-cake text-secondary"></i> Ngày sinh: <%= @guider.profile.date_of_birth.strftime('%d/%m/%Y') %></li>
+                    <li><i class="fas fa-home text-secondary"></i> Quê quán: <%= @guider.profile.hometown %></li>
+                    <li><i class="fas fa-map-marker-alt text-secondary"></i> Sống tại: <%= @guider.profile.live_at %></li>
+                    <li><i class="fas fa-suitcase text-secondary"></i> Làm việc: <%= @guider.profile.work %></li>
+                    <li><i class="fas fa-heart text-secondary"></i> Sở thích: <%= @guider.profile.interests %></li>
                     <li><i class="fas fa-rss text-secondary"></i> 229 người theo dõi</li>
                   </ul>
                 </div>
@@ -55,12 +59,6 @@
                         <a href="#" title="">
                           <img src="images/ic1.png" alt="">
                           <span>Blog</span>
-                        </a>
-                      </li>
-                      <li data-tab="info-dd">
-                        <a href="#" title="">
-                          <img src="images/ic2.png" alt="">
-                          <span>Chat</span>
                         </a>
                       </li>
                     </ul>
@@ -151,8 +149,27 @@
             <div class="col-lg-3">
               <div class="right-sidebar">
                 <div class="post-bar">
-                  <div>Chọn ngày khởi hành</div>
-                  <input class="datepicker" name="prova" data-format="dd/MM/yy hh:mm"/>
+                  <div style="display: flex; justify-content: space-between;">
+                    <div>Ngày xuất phát</div>
+                    <input class="datepicker" data-format="dd/MM/yy" style="width: 90px; text-align: center"/>
+                  </div>
+                  <div style="display: flex; justify-content: space-between;">
+                    <div style="display: flex;">
+                      <h1 style="margin-right: 5px">2</h1>
+                      <h2>Người lớn</h2>
+                    </div>
+                    <div>
+                      <button class="btn number-button minus-adult btn-general">
+                        <i class="fa fa-minus"></i>
+                      </button>
+                      <button class="btn number-button minus-adult btn-general">
+                        <i class="fa fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between;">
+                    <div>Ngày xuất phát</div>
+                  </div>
                 </div>
               </div>
               <!--right-sidebar end-->

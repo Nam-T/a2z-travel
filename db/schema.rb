@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.string "uid", default: "", null: false
     t.bigint "user_id"
     t.bigint "guider_id"
+    t.integer "profile_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["email"], name: "index_accounts_on_email", unique: true
@@ -79,6 +80,18 @@ ActiveRecord::Schema.define(version: 0) do
     t.integer "bill_exam"
     t.integer "total_time"
     t.integer "guider_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "profiles", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC", force: :cascade do |t|
+    t.datetime "date_of_birth"
+    t.string "country"
+    t.string "hometown"
+    t.string "live_at"
+    t.string "work"
+    t.string "interests"
+    t.integer "account_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
