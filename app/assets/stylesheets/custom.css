@@ -1,0 +1,17 @@
+button.minus{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133)) !important;
+  border-image: initial;
+  border: 1px solid #7b7777;
+}
+
+button.btn-submit{
+  background: #f9ab52!important;
+  color: #fff;
+  height: 28px;
+  border-radius: 4px;
+  line-height: unset;
+}

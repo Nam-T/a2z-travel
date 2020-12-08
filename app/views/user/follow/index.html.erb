@@ -7,98 +7,31 @@
       </div>
       <!--company-title end-->
       <div class="companies-list">
-        <div class="row">
-          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-            <div class="company_profile_info">
-              <div class="company-up-info">
-                <%=image_tag("tmp/avt.png")%>
-                <h3>Thu Trang</h3>
-                <h4>Quê quán:  Sapa, Lào Cai</h4>
-                <ul>
-                  <li><button type="button" class="btn btn-light border">
-                      <i class="fas fa-rss text-secondary"></i>
-                      Đang theo dõi
-                    </button></li>
-                  <li><a href="#" title="" class="message-us"><i class="fas fa-comments"></i></li>
-                  </ul>
-                </div>
-                <a href="guider-profile.html" title="" class="view-more-pro">Trang cá nhân</a>
-              </div>
-              <!--company_profile_info end-->
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-              <div class="company_profile_info">
-                <div class="company-up-info">
-                  <%=image_tag("tmp/eya.jpg")%>
-                  <h3>Ngọc Vân</h3>
-                  <h4>Quê quán:  Hải Phòng</h4>
-                  <ul>
-                    <li><button type="button" class="btn btn-light border">
-                        <i class="fas fa-rss text-secondary"></i>
-                        Đang theo dõi
-                      </button></li>
-                    <li><a href="#" title="" class="message-us"><i class="fas fa-comments"></i></li>
-                    </ul>
-                  </div>
-                  <a href="guider-profile.html" title="" class="view-more-pro">Trang cá nhân</a>
-                </div>
-                <!--company_profile_info end-->
-              </div>
-              <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <div class="company_profile_info">
-                  <div class="company-up-info">
-                    <%=image_tag("tmp/any.jpg")%>
-                    <h3>Nam Vũ</h3>
-                    <h4>Quê quán:  Hải Phòng</h4>
-                    <ul>
-                      <li><button type="button" class="btn btn-light border">
-                          <i class="fas fa-rss text-secondary"></i>
-                          Đang theo dõi
-                        </button></li>
-                      <li><a href="#" title="" class="message-us"><i class="fas fa-comments"></i></li>
-                      </ul>
-                    </div>
-                    <a href="guider-profile.html" title="" class="view-more-pro">Trang cá nhân</a>
-                  </div>
-                  <!--company_profile_info end-->
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                  <div class="company_profile_info">
-                    <div class="company-up-info">
-                      <%=image_tag("tmp/eya2.jpg")%>
-                      <h3>Phương Nhung</h3>
-                      <h4>Quê quán:  Vĩnh Phúc</h4>
-                      <ul>
-                        <li><button type="button" class="btn btn-light border">
-                            <i class="fas fa-rss text-secondary"></i>
-                            Đang theo dõi
-                          </button></li>
-                        <li><a href="#" title="" class="message-us"><i class="fas fa-comments"></i></li>
-                        </ul>
-                      </div>
-                      <a href="guider-profile.html" title="" class="view-more-pro">Trang cá nhân</a>
-                    </div>
-                    <!--company_profile_info end-->
-                  </div>
-                </div>
-              </div>
-              <!--companies-list end-->
-              <div class="process-comm">
-                <div class="spinner">
-                  <div class="bounce1"></div>
-                  <div class="bounce2"></div>
-                  <div class="bounce3"></div>
-                </div>
-              </div>
-              <!--process-comm end-->
-            </div>
-          </section>
-          <!--companies-info end-->
-          <footer>
-            <div class="footy-sec mn no-margin">
-              <div class="container">
-              </div>
-            </div>
-          </footer>
-          <!--footer end-->
+        <% @guiders.each_slice(4) do |guider_list| %>
+          <div class="row">
+            <% guider_list.each do |guider| %>
+              <%= render 'user/follow/guider_info', guider: guider %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+      <!--companies-list end-->
+      <div class="process-comm">
+        <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
         </div>
+      </div>
+      <!--process-comm end-->
+    </div>
+  </section>
+  <!--companies-info end-->
+  <footer>
+    <div class="footy-sec mn no-margin">
+      <div class="container">
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+</div>

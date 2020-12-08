@@ -1,0 +1,8 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+create_table 'tour_images', id: :integer, force: :cascade, options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC' do |t|
+  t.string   'image'
+  t.integer  'journey_segment_id'
+  t.datetime 'created_at'
+  t.datetime 'updated_at'
+end

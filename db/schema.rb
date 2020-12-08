@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.string "uid", default: "", null: false
     t.bigint "user_id"
     t.bigint "guider_id"
+    t.integer "profile_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["email"], name: "index_accounts_on_email", unique: true
@@ -61,6 +62,50 @@ ActiveRecord::Schema.define(version: 0) do
     t.index ["account_id", "role_id"], name: "index_accounts_roles_on_account_id_and_role_id"
   end
 
+  create_table "follows", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "guider_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["guider_id"], name: "index_relationships_on_guider_id"
+    t.index ["guider_id"], name: "index_relationships_on_user_id_and_guider_id", unique: true
+    t.index ["user_id"], name: "index_relationships_on_user_id"
+  end
+
+  create_table "journey_segments", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC", force: :cascade do |t|
+    t.string "departure"
+    t.string "arrival"
+    t.integer "stt"
+    t.integer "spend_time"
+    t.integer "journey_id"
+    t.text "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "journeys", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC", force: :cascade do |t|
+    t.string "name"
+    t.integer "max_member"
+    t.integer "min_member"
+    t.integer "bill_exam"
+    t.integer "total_time"
+    t.integer "guider_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "profiles", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC", force: :cascade do |t|
+    t.datetime "date_of_birth"
+    t.string "country"
+    t.string "hometown"
+    t.string "live_at"
+    t.string "work"
+    t.string "interests"
+    t.integer "account_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "roles", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name"
     t.string "resource_type"
@@ -69,6 +114,13 @@ ActiveRecord::Schema.define(version: 0) do
     t.datetime "updated_at"
     t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
     t.index ["name"], name: "index_roles_on_name"
+  end
+
+  create_table "tour_images", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC", force: :cascade do |t|
+    t.string "image"
+    t.integer "journey_segment_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

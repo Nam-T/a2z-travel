@@ -1,0 +1,12 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+create_table 'journey_segments', id: :integer, force: :cascade, options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC' do |t|
+  t.string   'departure'
+  t.string   'arrival'
+  t.integer  'stt'
+  t.integer  'spend_time'
+  t.integer  'journey_id'
+  t.text     'content'
+  t.datetime 'created_at'
+  t.datetime 'updated_at'
+end

@@ -37,6 +37,7 @@ create_table 'accounts', id: :integer, force: :cascade, options: 'ENGINE=InnoDB 
   t.string   'uid', default: '', null: false
   t.bigint   'user_id'
   t.bigint   'guider_id'
+  t.integer  'profile_id'
   t.datetime 'created_at'
   t.datetime 'updated_at'
 

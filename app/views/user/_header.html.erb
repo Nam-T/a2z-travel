@@ -17,7 +17,7 @@
           <li>
             <%= link_to(user_homepage_index_path) do %>
               <span><i class="fas fa-users"></i></span>
-              Thuê Guider
+              Lộ trình du lịch
             <% end %>
           </li>
           <li>
@@ -84,7 +84,7 @@
         <a href="#" title=""><i class="fa fa-bars"></i></a>
       </div>
       <!--menu-btn end-->
-      <div class="user-account">
+      <div class="user-account" style="cursor: pointer">
         <div class="user-info">
           <% if current_account.avatar? %>
             <%=image_tag(@current_account.avatar.url, alt: 'Image')%>

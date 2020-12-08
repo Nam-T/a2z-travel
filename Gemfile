@@ -95,7 +95,14 @@ gem 'simple_form'
 # View
 gem 'font-awesome-rails'
 gem 'font-awesome-sass'
+gem 'font_awesome5_rails'
 
 # Image
 gem 'carrierwave'
 gem 'mini_magick'
+
+# Data-picker
+gem 'momentjs-rails'
+gem 'bootstrap-sass'
+gem 'bootstrap4-datetime-picker-rails'
+gem 'jquery-ui-rails'

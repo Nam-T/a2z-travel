@@ -1,0 +1,11 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+create_table 'follows', id: :integer, force: :cascade, options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC' do |t|
+  t.integer "user_id"
+  t.integer "guider_id"
+  t.datetime "created_at"
+  t.datetime "updated_at"
+  t.index ["user_id"], name: "index_relationships_on_user_id"
+  t.index ["guider_id", "guider_id"], name: "index_relationships_on_user_id_and_guider_id", unique: true
+  t.index ["guider_id"], name: "index_relationships_on_guider_id"
+end

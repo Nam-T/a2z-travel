@@ -1,0 +1,24 @@
+<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+  <div class="company_profile_info">
+    <div class="company-up-info">
+      <% if guider.avatar? %>
+        <%=image_tag(guider.avatar.url, alt: 'Image')%>
+      <% else %>
+        <%=image_tag("guest/guest_man.jpg")%>
+      <% end %>
+      <h3><%= guider.name %></h3>
+      <h4>Quê quán:  <%= guider.profile.hometown %></h4>
+      <ul>
+        <li>
+          <button type="button" class="btn btn-light border">
+            <i class="fas fa-rss text-secondary"></i>
+            Đang theo dõi
+          </button>
+        </li>
+        <li><a href="#" title="" class="message-us"><i class="fas fa-comments"></i></li>
+        </ul>
+      </div>
+      <%= link_to "Trang cá nhân", user_guider_path(@current_user ,guider), class: "view-more-pro" %>
+    </div>
+    <!--company_profile_info end-->
+  </div>
