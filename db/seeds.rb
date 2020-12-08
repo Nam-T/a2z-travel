@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 load Rails.root.join('db', 'seeds', 'seed_accounts.rb')
+load Rails.root.join('db', 'seeds', 'seed_journeys.rb')

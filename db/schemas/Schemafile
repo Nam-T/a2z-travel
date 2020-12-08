@@ -1,4 +1,6 @@
 require 'accounts_roles.schema'
 require 'accounts.schema'
+require 'journey_segments.schema'
 require 'journeys.schema'
 require 'roles.schema'
+require 'tour_images.schema'

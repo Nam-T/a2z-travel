@@ -9,6 +9,8 @@ class Account < ApplicationRecord
 
   mount_uploader :avatar, AvatarUploader
 
+  has_many :journeys, foreign_key: 'guider_id', dependent: :destroy, inverse_of: :guider
+
   private
 
   def roles_valid
