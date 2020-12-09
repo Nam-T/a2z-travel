@@ -19,7 +19,7 @@ class User::MessengerController < User::UserApplicationController
     )
 
     if @message.save
-      BroadcastMessageJob.perform_later(@message.content)
+      BroadcastMessageJob.perform_later(@message, @room_message, @current_user)
     end
 
     respond_to do |format|

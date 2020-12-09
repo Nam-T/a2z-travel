@@ -7,4 +7,28 @@ App.room = App.cable.subscriptions.create "RoomChannel",
 
   received: (data) ->
     $('#message_content').val('')
-    
+    <%# if (data['check_auth'] == true) {
+      div = `
+        <div class="main-message-box st3">
+          <div class="message-dt st3">
+            <div class="message-inner-dt">
+              <p>` + data['content'] + `</p>
+            </div>
+            <span></span>
+          </div>
+        </div>
+      `
+    }else{
+      div = `
+        <div class="main-message-box st3">
+          <div class="message-dt st3">
+            <div class="message-inner-dt">
+              <p>` + data['content'] + `</p>
+            </div>
+            <span></span>
+          </div>
+        </div>
+      `
+    } %>
+    <%# div = "<div class="main-message-box st3"><div class="message-dt st3"><div class="message-inner-dt"><p>" + data['content'] + "</p></div><span></span></div></div>" %>
+    $('#mCSB_1_container').append($(data['content']))

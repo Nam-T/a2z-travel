@@ -3,7 +3,7 @@ class RoomMessage < ApplicationRecord
   # t.integer  'guider_id'
 
   belongs_to :guider, -> { includes(:roles).where(roles: { name: 'guider' }) }, class_name: 'Account', foreign_key: 'guider_id'
-  belongs_to :user, -> { includes(:roles).where(roles: { name: 'guider' }) }, class_name: 'Account', foreign_key: 'user_id'
+  belongs_to :user, -> { includes(:roles).where(roles: { name: 'user' }) }, class_name: 'Account', foreign_key: 'user_id'
 
   validate :roles_valid
   has_many :messages
