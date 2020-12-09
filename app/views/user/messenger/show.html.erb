@@ -49,14 +49,14 @@
               <div class="message-bar-head">
                 <div class="usr-msg-details">
                   <div class="usr-ms-img">
-                    <% if @rooms.first.guider.avatar? %>
-                      <%=image_tag(@rooms.first.guider.avatar.url, alt: 'Image')%>
+                    <% if @room.guider.avatar? %>
+                      <%=image_tag(@room.guider.avatar.url, alt: 'Image')%>
                     <% else %>
                       <%=image_tag("guest/guest_man.jpg")%>
                     <% end %>
                   </div>
                   <div class="usr-mg-info">
-                    <h3><%= @rooms.first.guider.name %></h3>
+                    <h3><%= @room.guider.name %></h3>
                     <p>Online</p>
                   </div>
                   <!--usr-mg-info end-->
@@ -65,8 +65,8 @@
               </div>
               <!--message-bar-head end-->
               <div class="messages-line">
-                <% @rooms.first.messages.each do |message| %>
-                  <% if message.account == @current_user %>
+                <% @room.messages.each do |message| %>
+                  <% if message.account != @current_user %>
                     <div class="main-message-box st3">
                       <div class="message-dt st3">
                         <div class="message-inner-dt">
@@ -77,8 +77,8 @@
                       </div>
                       <!--message-dt end-->
                       <div class="messg-usr-img">
-                        <% if @rooms.first.guider.avatar? %>
-                          <%=image_tag(@rooms.first.guider.avatar.url, alt: 'Image')%>
+                        <% if @room.guider.avatar? %>
+                          <%=image_tag(@room.guider.avatar.url, alt: 'Image')%>
                         <% else %>
                           <%=image_tag("guest/guest_man.jpg")%>
                         <% end %>
@@ -110,9 +110,10 @@
               </div>
               <!--messages-line end-->
               <div class="message-send-area">
-                <form>
+                <%= form_for @current_user.messages.build, url: "/user/#{@current_user.id}/messenger", action: 'create', html: {:multipart => true} do |f| %>
                   <div class="mf-field">
-                    <input type="text" name="message" placeholder="Type a message here">
+                    <%= f.text_field :content, name: 'content', type: "text", placeholder: 'Type a message here' %>
+                    <%= f.hidden_field :room_message_id, value: @room.id %>
                     <button type="submit">Send</button>
                   </div>
                   <ul>
@@ -120,7 +121,7 @@
                     <li><a href="#" title=""><i class="fa fa-camera"></i></a></li>
                     <li><a href="#" title=""><i class="fa fa-paperclip"></i></a></li>
                   </ul>
-                </form>
+                <% end %>
               </div>
               <!--message-send-area end-->
             </div>
