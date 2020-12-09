@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: ec06d217644cf3d66bd0e658c9b168af8f0c38c7
+  branch: master
+  specs:
+    faker (2.15.1)
+      i18n (>= 1.6, < 2)
+
+GIT
   remote: https://github.com/phatworx/devise_security_extension.git
   revision: b2ee978af7d49f0fb0e7271c6ac074dfb4d39353
   specs:
@@ -231,6 +239,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redis (4.2.5)
     regexp_parser (1.8.2)
     responders (3.0.1)
       actionpack (>= 5.0)
@@ -300,6 +309,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    scrollbar-rails (1.0.0)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -376,6 +386,7 @@ DEPENDENCIES
   devise_security_extension!
   devise_token_auth
   factory_bot_rails
+  faker!
   font-awesome-rails
   font-awesome-sass
   font_awesome5_rails
@@ -391,12 +402,14 @@ DEPENDENCIES
   puma (~> 3.11)
   rack-cors
   rails (~> 5.2.4, >= 5.2.4.4)
+  redis
   ridgepole
   rolify
   rspec-rails
   rubocop
   rubocop-rails
   sass-rails (~> 5.0)
+  scrollbar-rails
   selenium-webdriver
   shoulda-matchers
   simple_form

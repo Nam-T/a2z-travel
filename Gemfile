@@ -106,3 +106,10 @@ gem 'momentjs-rails'
 gem 'bootstrap-sass'
 gem 'bootstrap4-datetime-picker-rails'
 gem 'jquery-ui-rails'
+gem 'scrollbar-rails'
+
+# Faker
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+
+# Redis
+gem 'redis'

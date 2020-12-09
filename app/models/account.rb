@@ -10,6 +10,7 @@ class Account < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
 
   has_many :journeys, foreign_key: 'guider_id', dependent: :destroy, inverse_of: :guider
+  has_many :messages, foreign_key: 'sender_id', dependent: :destroy
   has_one :profile, dependent: :destroy
   has_many :active_relationships, class_name:  "Follow",
                                   foreign_key: "user_id",
@@ -33,6 +34,10 @@ class Account < ApplicationRecord
   # Returns true if the current guider is following the other guider.
   def following?(other_guider)
     following.include?(other_guider)
+  end
+
+  def room_messages
+    RoomMessage.where('user_id = ? OR guider_id = ?', self.id, self.id)
   end
 
   private

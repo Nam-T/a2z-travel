@@ -16,6 +16,7 @@
  *= require jquery-ui
  *= require font_awesome5_webfont
  *= require font_awesome5
+ *= require jquery.mCustomScrollbar
  */
  @import "bootstrap";
  @import "font-awesome-sprockets";

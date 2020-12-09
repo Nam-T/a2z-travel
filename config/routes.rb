@@ -56,7 +56,7 @@ Rails.application.routes.draw do
       resources :history, controller: 'history', only: %i[index] do
       end
 
-      resources :messenger, controller: 'messenger', only: %i[index] do
+      resources :messenger, controller: 'messenger', only: %i[index create show] do
       end
     end
   end
