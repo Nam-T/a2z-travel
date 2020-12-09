@@ -23,3 +23,4 @@
 //= require tempusdominus-bootstrap-4
 //= require jquery-ui
 //= require font_awesome5
+//= require jquery.mCustomScrollbar.concat.min

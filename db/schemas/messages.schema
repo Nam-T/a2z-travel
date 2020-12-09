@@ -1,0 +1,9 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+create_table 'messages', id: :integer, force: :cascade, options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC' do |t|
+  t.string   'content'
+  t.integer  'room_message_id'
+  t.integer  'sender_id'
+  t.datetime 'created_at'
+  t.datetime 'updated_at'
+end
