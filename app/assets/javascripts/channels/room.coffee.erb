@@ -6,5 +6,5 @@ App.room = App.cable.subscriptions.create "RoomChannel",
     # Called when the subscription has been terminated by the server
 
   received: (data) ->
-    debugger
-    $('#messages').append "<p>#{data}</p>"
+    $('#message_content').val('')
+    
