@@ -110,7 +110,7 @@
               </div>
               <!--messages-line end-->
               <div class="message-send-area">
-                <%= form_for @current_user.messages.build, url: "/user/#{@current_user.id}/messenger", action: 'create', html: {:multipart => true} do |f| %>
+                <%= form_for @current_user.messages.build, url: "/user/#{@current_user.id}/messenger", action: 'create', html: {:multipart => true}, remote: true do |f| %>
                   <div class="mf-field">
                     <%= f.text_field :content, name: 'content', type: "text", placeholder: 'Type a message here' %>
                     <%= f.hidden_field :room_message_id, value: @room.id %>

@@ -19,7 +19,11 @@ class User::MessengerController < User::UserApplicationController
     )
 
     if @message.save
+      BroadcastMessageJob.perform_later(@message.content)
+    end
 
+    respond_to do |format|
+      format.js {render :js => ""}
     end
   end
 
