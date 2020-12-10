@@ -20,7 +20,8 @@ button.btn-submit{
 
 .schedule-item {
 	float: left;
-    width: 100%;
+	width: 100%;
+	min-height: 380px;
     background-color: #fff;
     border-left: 1px solid #e4e4e4;
     border-right: 1px solid #e4e4e4;
