@@ -1,0 +1,36 @@
+<div class="col-lg-4 col-md-4 col-sm-16 col-12">
+  <div class="schedule-item">
+    <div class="schedule-item-img ">
+      <%=image_tag(journey.journey_segments.first.tour_images.first.image.url, alt: 'Image')%>
+      <div class="schedule-local">
+        <span class=""><i class="fas fa-map-marker-alt" style="color: #F79321;"></i> <%= journey.name %></span>
+      </div>
+    </div>
+    <div class="schedule-item-title">
+      <a href="#"><%= journey.name %></a>
+    </div>
+    <div class="schedule-item-content" style="padding: 14px;">
+      <p><i class="la la-clock-o"></i><%= journey.total_time %></p>
+      <div class="schedule-content-feed" style="display: flex;">
+        <div class="schedule-content-rate">
+          <i class="fas fa-star checked"></i>
+          <i class="fas fa-star checked"></i>
+          <i class="fas fa-star checked"></i>
+          <i class="fas fa-star checked"></i>
+          <i class="fas fa-star unchecked"></i>
+        </div>
+        <span>| 2 đánh giá</span>
+      </div>
+      <div class="tour-list">
+        <ul class="">
+          <% journey.journey_segments.take(5).each do |segment| %>
+            <li>- <%= segment.arrival %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="guider-img">
+        <img src="images/avt.png" alt="" class="rounded-circle" data-toggle="tooltip" data-placement="top" title=" Guider Thu Trang">
+      </div>
+    </div>
+  </div>
+</div>

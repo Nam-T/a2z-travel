@@ -15,3 +15,77 @@ button.btn-submit{
   border-radius: 4px;
   line-height: unset;
 }
+
+/* schedule style */
+
+.schedule-item {
+	float: left;
+    width: 100%;
+    background-color: #fff;
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.schedule-item:hover {
+	cursor: pointer;
+	background-color: #CAE1FF;
+}
+
+.schedule-item:hover .schedule-item-img img{
+	transform: scale(1.05);
+}
+
+.schedule-item-title a{
+	font-size: 20px;
+	font-weight: 600;
+	text-align: left !important;
+	padding: 14px;
+}
+
+.schedule-item-img img {
+	transition: transform .2s;
+	cursor: pointer;
+	padding: 14px;
+	position: relative;
+}
+
+.schedule-local {
+	position: absolute;
+	color: #fff;
+	background-color: rgba(0, 70, 126, 0.8);
+	padding: 8px;
+}
+
+.schedule-content-rate .checked{
+	color: #ffff00;
+}
+
+.schedule-content-rate .unchecked{
+	color: #cccccc;
+}
+
+.schedule-content-feed span {
+	font-size: 14px;
+	color: #666666;
+	padding: 2px;
+}
+
+.tour-list {
+	padding-top:8px;
+	font-size: 14px;
+    line-height: 24px;
+    color: #00abc5;
+}
+
+.guider-img img {
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-ms-border-radius: 100px;
+	-o-border-radius: 100px;
+	border-radius: 100px;
+	margin-top: 2px;
+	float: right;
+	width: 20%;
+	padding: 8px;
+}

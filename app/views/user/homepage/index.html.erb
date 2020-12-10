@@ -1,140 +1,104 @@
 <div class="wrapper">
   <%= render 'user/header' %>
-    <section class="companies-info">
-      <div class="container">
-        <div class="company-title">
-          <h3>Lộ trình du lịch</h3>
-        </div>
-        <!--company-title end-->
-        <div class="main-section-data">
-          <div class="row">
-            <div class="col-lg-3">
-              <div class="filter-secs">
-                <div class="paddy">
-                  <div class="filter-dd">
-                    <div class="filter-ttl">
-                      <h3>Khu vực</h3>
+  <section class="companies-info">
+    <div class="container">
+      <div class="company-title">
+        <h3>Lộ trình du lịch</h3>
+      </div>
+      <!--company-title end-->
+      <div class="main-section-data">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="filter-secs">
+              <div class="paddy">
+                <div class="filter-dd mt-2">
+                  <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Tìm kiếm..">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="la la-search"></i></div>
                     </div>
-                    <form class="job-tp">
-                      <select style="background-color: #ffffff">
-                        <option>Tùy chọn</option>
-                        <option>Sapa</option>
-                        <option>Hà Nội</option>
-                        <option>Hải Phòng</option>
-                        <option>Sơn La</option>
-                      </select>
-                      <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                    </form>
                   </div>
-                  <div class="filter-dd">
-                    <div class="filter-ttl">
-                      <h3>Giới tính</h3>
-                    </div>
-                    <ul class="avail-checks">
-                      <li>
-                        <input type="radio" name="cc" id="c1">
-                        <label for="c1">
-                          <span></span>
-                        </label>
-                        <small>Nữ</small>
-                      </li>
-                      <li>
-                        <input type="radio" name="cc" id="c2">
-                        <label for="c2">
-                          <span></span>
-                        </label>
-                        <small>Nam</small>
-                      </li>
-                    </ul>
+                </div>
+                <div class="filter-dd">
+                  <div class="filter-ttl">
+                    <h3>Khu vực</h3>
                   </div>
-                  <div class="filter-dd">
-                    <div class="filter-ttl">
-                      <h3>Tuổi</h3>
-                    </div>
-                    <ul class="avail-checks">
-                      <li>
-                        <input type="radio" name="cc" id="c1">
-                        <label for="c1">
-                          <span></span>
-                        </label>
-                        <small>&lt; &#61; 24 tuổi</small>
-                      </li>
-                      <li>
-                        <input type="radio" name="cc" id="c2">
-                        <label for="c2">
-                          <span></span>
-                        </label>
-                        <small>25 tuổi -> 30 tuổi</small>
-                      </li>
-                      <li>
-                        <input type="radio" name="cc" id="c2">
-                        <label for="c2">
-                          <span></span>
-                        </label>
-                        <small>&gt; 30 tuổi</small>
-                      </li>
-                    </ul>
+                  <form class="job-tp">
+                    <select style="background-color: #ffffff">
+                      <option>Tùy chọn</option>
+                      <option>Sapa</option>
+                      <option>Hà Nội</option>
+                      <option>Hải Phòng</option>
+                      <option>Sơn La</option>
+                    </select>
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                  </form>
+                </div>
+                <div class="filter-dd">
+                  <div class="filter-ttl">
+                    <h3>Giới tính</h3>
                   </div>
-                  <div class="text-center">
-										<button class="btn btn-success border" type="button">Tìm kiếm</button>
-									</div>
+                  <ul class="avail-checks">
+                    <li>
+                      <input type="radio" name="cc" id="c1">
+                      <label for="c1">
+                        <span></span>
+                      </label>
+                      <small>Nữ</small>
+                    </li>
+                    <li>
+                      <input type="radio" name="cc" id="c2">
+                      <label for="c2">
+                        <span></span>
+                      </label>
+                      <small>Nam</small>
+                    </li>
+                  </ul>
+                </div>
+                <div class="filter-dd">
+                  <div class="filter-ttl">
+                    <h3>Tuổi</h3>
+                  </div>
+                  <ul class="avail-checks">
+                    <li>
+                      <input type="radio" name="cc" id="c1">
+                      <label for="c1">
+                        <span></span>
+                      </label>
+                      <small>&lt; &#61; 24 tuổi</small>
+                    </li>
+                    <li>
+                      <input type="radio" name="cc" id="c2">
+                      <label for="c2">
+                        <span></span>
+                      </label>
+                      <small>25 tuổi -> 30 tuổi</small>
+                    </li>
+                    <li>
+                      <input type="radio" name="cc" id="c2">
+                      <label for="c2">
+                        <span></span>
+                      </label>
+                      <small>&gt; 30 tuổi</small>
+                    </li>
+                  </ul>
+                </div>
+                <div class="text-center">
+                  <button class="btn btn-success border" type="button"><i class="fas fa-filter"></i> Lọc</button>
                 </div>
               </div>
-              <!--filter-secs end-->
             </div>
-            <div class="col-lg-9">
-              <div class="companies-list">
-                <div class="row">
-                  <div class="col-lg-4	 col-md-4 col-sm-6 col-12">
-                    <div class="company_profile_info">
-                      <div class="company-up-info">
-                        <%=image_tag("tmp/avt.png")%>
-                        <h3>Thu Trang</h3>
-                        <ul class="social_links">
-                          <li><i class="fas fa-home text-secondary"></i> Quê quán: Lào Cai</li>
-                          <li><i class="fas fa-map-marker-alt text-secondary"></i> Sống tại: Sapa, Lào Cai</li>
-                          <li><i class="fas fa-heart text-secondary"></i> Sở thích: Du lịch, ca hát</li>
-                          <li><i class="fas fa-rss text-secondary"></i> 229 người theo dõi</li>
-                        </ul>
-                      </div>
-                      <%= link_to "Trang cá nhân", user_guider_path(@current_user ,Account.third), class: "view-more-pro" %>
-                    </div>
-                    <!--company_profile_info end-->
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <div class="company_profile_info">
-                      <div class="company-up-info">
-                        <%=image_tag("tmp/eya.jpg")%>
-                        <h3>Ngọc Vân</h3>
-                        <ul class="social_links">
-                          <li><i class="fas fa-home text-secondary"></i> Quê quán: Lào Cai</li>
-                          <li><i class="fas fa-map-marker-alt text-secondary"></i> Sống tại: Sapa, Lào Cai</li>
-                          <li><i class="fas fa-heart text-secondary"></i> Sở thích: Du lịch, ca hát</li>
-                          <li><i class="fas fa-rss text-secondary"></i> 229 người theo dõi</li>
-                        </ul>
-                      </div>
-                      <a href="guider-profile.html" title="" class="view-more-pro">Trang cá nhân</a>
-                    </div>
-                    <!--company_profile_info end-->
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <div class="company_profile_info">
-                      <div class="company-up-info">
-                        <%=image_tag("tmp/any.jpg")%>
-                        <h3>Nam Vũ</h3>
-                        <ul class="social_links">
-                          <li><i class="fas fa-home text-secondary"></i> Quê quán: Lào Cai</li>
-                          <li><i class="fas fa-map-marker-alt text-secondary"></i> Sống tại: Sapa, Lào Cai</li>
-                          <li><i class="fas fa-heart text-secondary"></i> Sở thích: Du lịch, ca hát</li>
-                          <li><i class="fas fa-rss text-secondary"></i> 229 người theo dõi</li>
-                        </ul>
-                      </div>
-                      <a href="guider-profile.html" title="" class="view-more-pro">Trang cá nhân</a>
-                    </div>
-                    <!--company_profile_info end-->
-                  </div>
+            <!--filter-secs end-->
+          </div>
+          <div class="col-lg-9">
+            <div class="companies-list">
+              <% @journeys.each_slice(3) do |journey_list| %>
+                <div class="row" style="margin-top: 20px">
+                  <% journey_list.each do |journey| %>
+                    <%= render 'user/homepage/tour', journey: journey %>
+                  <% end %>
                 </div>
-              </div>
+              <% end %>
             </div>
             <!--companies-list end-->
           </div>
