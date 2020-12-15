@@ -90,3 +90,27 @@ button.btn-submit{
 	width: 20%;
 	padding: 8px;
 }
+
+.img-preview-reponsive{
+	width: 235px !important;
+	height: 180px !important;
+}
+
+.journey-item-name{
+	white-space: nowrap;
+    overflow: hidden !important;
+    width: 100% !important;
+    display: block;
+	text-overflow: ellipsis;
+	padding-top: 0px !important;
+}
+
+.avt-follow{
+	width: 90px;
+	height: 90px;
+}
+
+.avt-guider-profile{
+	width: 198px;
+	height: 198px;
+}

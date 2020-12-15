@@ -1,13 +1,13 @@
 <div class="col-lg-4 col-md-4 col-sm-16 col-12">
   <div class="schedule-item">
     <div class="schedule-item-img ">
-      <%=image_tag(journey.journey_segments.first.tour_images.first.image.url, alt: 'Image')%>
+      <%=image_tag(journey.journey_segments.first.tour_images.first.image.url, class: 'img-preview-reponsive', alt: 'Image')%>
       <div class="schedule-local">
         <span class=""><i class="fas fa-map-marker-alt" style="color: #F79321;"></i> <%= journey.name %></span>
       </div>
     </div>
     <div class="schedule-item-title">
-      <a href="#"><%= journey.name %></a>
+      <a class="journey-item-name" href="#"><%= journey.name %></a>
     </div>
     <div class="schedule-item-content" style="padding: 14px;">
       <p><i class="la la-clock-o"></i><%= journey.total_time %></p>
