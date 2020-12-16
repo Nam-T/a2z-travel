@@ -2,7 +2,7 @@
   <div class="company_profile_info">
     <div class="company-up-info">
       <% if guider.avatar? %>
-        <%=image_tag(guider.avatar.url, alt: 'Image')%>
+        <%=image_tag(guider.avatar.url, alt: 'Image', class: 'avt-follow')%>
       <% else %>
         <%=image_tag("guest/guest_man.jpg")%>
       <% end %>

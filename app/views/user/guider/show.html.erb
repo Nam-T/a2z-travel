@@ -14,7 +14,7 @@
                 <div class="user_profile">
                   <div class="user-pro-img">
                     <% if @guider.avatar? %>
-                      <%=image_tag(@guider.avatar.url, alt: 'Image')%>
+                      <%=image_tag(@guider.avatar.url, alt: 'Image', class: 'avt-guider-profile')%>
                     <% else %>
                       <%=image_tag("guest/guest_man.jpg")%>
                     <% end %>
