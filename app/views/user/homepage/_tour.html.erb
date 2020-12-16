@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="schedule-item-title">
-      <%= link_to(journey.name, controller: 'user/guider', action: 'homepage_redirect', guider_id: journey.guider.id, journey_id: journey.id, class: 'journey-item-name') %>
+      <%= link_to(journey.name, {controller: 'user/guider', action: 'homepage_redirect', guider_id: journey.guider.id, journey_id: journey.id}, class: 'journey-item-name') %>
     </div>
     <div class="schedule-item-content" style="padding: 14px;">
       <p><i class="la la-clock-o"></i><%= journey.total_time %></p>
