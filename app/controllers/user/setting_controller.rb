@@ -10,7 +10,7 @@ class User::SettingController < User::UserApplicationController
 
   private
 
-  def user_params	
+  def user_params
     params.require(:account).permit(:avatar)
   end
 end

@@ -304,9 +304,25 @@ $(".user-info").on("click", function(){$("#users").hide();
     });
 
 
-
+    $("#edit-info").on("click", function(){
+        $("#form-view-info").css("display", "none");
+        $("#form-editing").css("display", "block");
+        $("#edit-info").css("display", "none");
+    })
+    
+    //click-ban-setting-info
+    $("#ban-edit").on("click", function(){
+        $("#form-view-info").css("display", "block");
+        $("#form-editing").css("display", "none");
+        $("#edit-info").css("display", "block");
+    })
+    
+    //click-ban-setting-info
+    $("#save-edit").on("click", function(){
+    $("#form-view-info").css("display", "block");
+    $("#form-editing").css("display", "none");
+    $("#edit-info").css("display", "block");
+    })
 
 
 });
-
-

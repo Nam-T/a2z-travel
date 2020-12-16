@@ -18,20 +18,78 @@
               <div class="tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
                 <div class="acc-setting">
                   <h3>Thông tin chung</h3>
-                  <%= form_for @current_user, url: user_setting_path(@current_user.id, @current_user.id), html: {:multipart => true} do |f| %>
+                  <form id="form-view-info">
+                    <div class="img-setting">
+                      <% if current_account.avatar? %>
+                        <%=image_tag(@current_account.avatar.url, alt: 'Image')%>
+                      <% else %>
+                        <%=image_tag("guest/guest_man.jpg")%>
+                      <% end %>
+                    </div>
+                    <h3 class="name-setting">Thu Trang </h3>
                     <div class="cp-field">
-                      <h5>Ảnh đại diện</h5>
+                      <h5><i class="fas fa-birthday-cake text-secondary"></i> Ngày sinh: <span class="content-info"><%= @current_user.profile.date_of_birth.strftime("%d/%m/%Y") %></span></h5>
+                    </div>
+                    <div class="cp-field">
+                      <h5><i class="fas fa-phone-alt text-secondary"></i> Số điện thoại: <span class="content-info"><%= @current_user.phone %></span></h5>
+                    </div>
+                    <div class="cp-field">
+                      <h5><i class="fas fa-home text-secondary"></i> Quê quán: <span class="content-info"><%= @current_user.profile.hometown %></span></h5>
+                    </div>
+                    <div class="cp-field">
+                      <h5><i class="fas fa-suitcase text-secondary"></i> Công việc hiện tại: <span class="content-info"><%= @current_user.profile.work %></span></h5>
+                    </div>
+                  </form>
+                  <!-- editing -->
+                  <%= form_for @current_user, url: user_setting_path(@current_user.id, @current_user.id), html: {:multipart => true, id: 'form-editing'} do |f| %>
+                    <div class="img-setting">
+                      <% if current_account.avatar? %>
+                        <%=image_tag(@current_account.avatar.url, alt: 'Image')%>
+                      <% else %>
+                        <%=image_tag("guest/guest_man.jpg")%>
+                      <% end %>
+                      <div class="add-dp" id="OpenImgUpload">
+                        <%= f.file_field :avatar, id: 'file' %>
+                        <label for="file"><i class="fas fa-camera"></i></label>
+                      </div>
+                    </div>
+                    <h3 class="name-setting">
+                      <input type="text" name="new-password">
+                    </h3>
+                    <div class="cp-field">
+                      <h5><i class="fas fa-birthday-cake text-secondary"></i> Ngày sinh</h5>
                       <div class="cpp-fiel">
-                        <%= f.file_field :avatar %>
+                        <input type="text" id="datepicker" value= <%= @current_user.profile.date_of_birth.strftime("%d/%m/%Y") %> >
+                      </div>
+                    </div>
+                    <div class="cp-field">
+                      <h5><i class="fas fa-phone-alt text-secondary"></i> Số điện thoại</h5>
+                      <div class="cpp-fiel">
+                        <input type="text" name="repeat-password" value=<%= @current_user.phone %>>
+                      </div>
+                    </div>
+                    <div class="cp-field">
+                      <h5><i class="fas fa-home text-secondary"></i> Quê quán</h5>
+                      <div class="cpp-fiel">
+                        <input type="text" name="repeat-password" value= <%= @current_user.profile.hometown %> >
+                      </div>
+                    </div>
+                    <div class="cp-field">
+                      <h5><i class="fas fa-suitcase text-secondary"></i> Công việc hiện tại</h5>
+                      <div class="cpp-fiel">
+                        <input type="text" name="repeat-password" value=<%= @current_user.profile.work %>>
                       </div>
                     </div>
                     <div class="save-stngs pd2">
                       <ul>
-                        <li><button type="submit" class="btn-save-setting"><i class="fas fa-save"></i> Lưu</button></li>
-                        <li><button type="submit" class="btn-ban-setting"><i class="fas fa-ban"></i> Hủy</button></li>
+                        <li><button type="submit" class="btn-save-setting" id="save-edit"><i class="fas fa-save"></i> Lưu</button></li>
+                        <li><button type="submit" class="btn-ban-setting" id="ban-edit"><i class="fas fa-ban"></i> Hủy</button></li>
                       </ul>
                     </div>
                   <% end %>
+                  <div class="text-center m-3">
+										<button type="submit" class="btn btn-primary border" id="edit-info"> Chỉnh sửa  <i class="fas fa-pencil-alt pl-2"></i></button>  
+									</div>
                 </div>
                 <!--acc-setting end-->
               </div>
