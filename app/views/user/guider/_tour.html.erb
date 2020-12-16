@@ -3,7 +3,10 @@
     <a href="">
       <h2><%= journey.name %></h2>
     </a>
-    <p><i class="la la-clock-o"></i>Thời gian: <%= journey.total_time %></p>
+    <%= form_for(journey, url: "/user/#{@current_user.id}/guider/#{journey.guider.id}", remote:true) do |f| %>
+      <%= f.select :id, journeys.map { |journey| [journey.name, journey.id] }, selected: journey.id %>
+    <% end %>
+    <p><i class="fas fa-calendar-alt"></i> Tổng thời gian: <%= journey.total_time %> giờ</p>
   </div>
   <% journey.journey_segments.order(stt: :asc).each do |journey_segment| %>
     <%= render 'user/guider/tour_segment', journey_segment: journey_segment %>
@@ -21,9 +24,11 @@
         <li>
           <p>22 lượt đi</p>
         </li>
-        <li><div id="review-id">
+        <li>
+          <div id="review-id">
             <p>Nhận xét</p>
-          </div></li>
+          </div>
+        </li>
       </ul>
     </div>
     <div class="border-top mt-2 review-content" id="review-content">
@@ -70,3 +75,9 @@
     </div>
   </div>
 </div>
+
+<script>
+  $(document).on('change', '#journey_id', function(event) {
+    $(this).closest('form').submit();
+  });
+</script>

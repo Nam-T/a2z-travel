@@ -1,0 +1,8 @@
+<%= form_for(@current_user.active_relationships.find_by(guider_id: @guider.id),url: user_follow_path(@current_user.id, @current_user.active_relationships.find_by(guider_id: @guider.id).id) , html: { method: :delete, class: 'form-follow' }, remote: true) do |f| %>
+  <%= button_tag(class: 'btn btn-light border mt-2') do %>
+    <i class="fas fa-rss text-secondary"></i> Bỏ theo dõi
+  <% end %>
+  <%= link_to user_setting_index_path, class: 'btn btn-light border mt-2' do %>
+    <i class="fab fa-facebook-messenger"></i> Nhắn tin
+  <% end %>
+<% end %>

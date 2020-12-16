@@ -1,0 +1,9 @@
+<%= form_for(@current_user.active_relationships.build, url: "/user/#{@current_user.id}/follow", html: {class: 'form-follow'}, remote:true) do |f| %>
+  <div><%= hidden_field_tag :guider_id, @guider.id %></div>
+  <%= button_tag(class: 'btn btn-light border mt-2') do %>
+    <i class="fas fa-rss text-secondary"></i> Theo dõi
+  <% end %>
+  <%= link_to user_setting_index_path, class: 'btn btn-light border mt-2' do %>
+    <i class="fab fa-facebook-messenger"></i> Nhắn tin
+  <% end %>
+<% end %>
