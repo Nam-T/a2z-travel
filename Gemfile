@@ -113,3 +113,7 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
 
 # Redis
 gem 'redis'
+gem "will_paginate"
+gem "bootstrap-will_paginate"
+gem "kaminari"
+gem "bootstrap-kaminari-views"

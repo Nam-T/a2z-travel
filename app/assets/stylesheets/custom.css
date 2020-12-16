@@ -114,3 +114,18 @@ button.btn-submit{
 	width: 198px;
 	height: 198px;
 }
+
+.pagination{
+	width: 100%;
+}
+
+.div-paginate{
+	margin-left: 15px;
+	margin-top: 20px;
+	width: 100%;
+	height: 100% !important
+}
+
+.div-paginate nav{
+	width: 100%;
+}
