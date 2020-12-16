@@ -3,7 +3,7 @@
     <a href="">
       <h2><%= journey.name %></h2>
     </a>
-    <p><i class="la la-clock-o"></i>Thời gian: <%= journey.total_time %></p>
+    <p><i class="fas fa-calendar-alt"></i> Tổng thời gian: <%= journey.total_time %> giờ</p>
   </div>
   <% journey.journey_segments.order(stt: :asc).each do |journey_segment| %>
     <%= render 'user/guider/tour_segment', journey_segment: journey_segment %>
