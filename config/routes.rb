@@ -41,7 +41,10 @@ Rails.application.routes.draw do
       resources :homepage, controller: 'homepage', only: %i[index] do
       end
 
-      resources :guider, controller: 'guider', only: %i[show] do
+      resources :guider, controller: 'guider', only: %i[show update] do
+        collection do
+          get ':guider_id/guider/:journey_id', to: 'guider#homepage_redirect'
+        end
       end
 
       resources :setting, controller: 'setting', only: %i[index update] do

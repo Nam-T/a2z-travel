@@ -41,7 +41,7 @@
               </div>
               <!--main-left-sidebar end-->
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-9">
               <div class="main-ws-sec">
                 <div class="user-tab-sec rewivew">
                   <div class="tab-feed st2 settingjb tab-guider">
@@ -66,8 +66,48 @@
                 <div class="product-feed-tab current" id="schedule">
                   <div class="tab-content">
                     <div class="tab-pane fade show active" id="mange" role="tabpanel" aria-labelledby="mange-tab">
-                      <div class="posts-section posts-section-blog">
-                        <%= render 'user/guider/tour', journey: @guider.journeys.first %>
+                      <div class="row">
+                        <div class="col-lg-8">
+                          <div class="posts-section posts-section-blog">
+                            <% if @guider.id.to_s == cookies[:guider_id] %>
+                              <% if @guider.journeys.find_by(cookies[:journey_id]).present? %>
+                                <% journey = @guider.journeys.find(cookies[:journey_id]) %>
+                              <% else %>
+                                <% journey = @guider.journeys.first %>
+                              <% end %>
+                            <% else %>
+                              <% journey = @guider.journeys.first %>
+                            <% end %>
+                            <%= render 'user/guider/tour', journey: journey , journeys: @guider.journeys %>
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="right-sidebar">
+                            <div class="post-bar">
+                              <div style="display: flex; justify-content: space-between;">
+                                <div style="line-height: 28px;">Ngày xuất phát</div>
+                                <input class="datepicker" data-format="dd/MM/yy" style="width: 90px; text-align: center;"/>
+                              </div>
+                              <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+                                <div style="display: flex;">
+                                  <h1 style="margin-right: 5px; line-height: 28px;">2</h1>
+                                  <h2 style="line-height: 28px;">Người lớn</h2>
+                                </div>
+                                <div style="width: 90px; display: flex; justify-content: inherit;">
+                                  <button class="btn number-button minus-adult btn-general minus">
+                                    <i class="fa fa-minus"></i>
+                                  </button>
+                                  <button class="btn number-button minus-adult btn-general minus">
+                                    <i class="fa fa-plus"></i>
+                                  </button>
+                                </div>
+                              </div>
+                              <div style="margin-top: 5px;">
+                                <button class="btn btn-flat btn-action btn-md btn-block requestButton btn-submit">Xem giá</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -142,34 +182,6 @@
                 <!--product-feed-tab end-->
               </div>
               <!--main-ws-sec end-->
-            </div>
-            <div class="col-lg-3">
-              <div class="right-sidebar">
-                <div class="post-bar">
-                  <div style="display: flex; justify-content: space-between;">
-                    <div style="line-height: 28px;">Ngày xuất phát</div>
-                    <input class="datepicker" data-format="dd/MM/yy" style="width: 90px; text-align: center;"/>
-                  </div>
-                  <div style="display: flex; justify-content: space-between; margin-top: 5px;">
-                    <div style="display: flex;">
-                      <h1 style="margin-right: 5px; line-height: 28px;">2</h1>
-                      <h2 style="line-height: 28px;">Người lớn</h2>
-                    </div>
-                    <div style="width: 90px; display: flex; justify-content: inherit;">
-                      <button class="btn number-button minus-adult btn-general minus">
-                        <i class="fa fa-minus"></i>
-                      </button>
-                      <button class="btn number-button minus-adult btn-general minus">
-                        <i class="fa fa-plus"></i>
-                      </button>
-                    </div>
-                  </div>
-                  <div style="margin-top: 5px;">
-                    <button class="btn btn-flat btn-action btn-md btn-block requestButton btn-submit">Xem giá</button>
-                  </div>
-                </div>
-              </div>
-              <!--right-sidebar end-->
             </div>
           </div>
         </div>
