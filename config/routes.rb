@@ -50,7 +50,7 @@ Rails.application.routes.draw do
       resources :blog, controller: 'blog', only: %i[index] do
       end
 
-      resources :follow, controller: 'follow', only: %i[index] do
+      resources :follow, controller: 'follow', only: %i[index create destroy] do
       end
 
       resources :history, controller: 'history', only: %i[index] do

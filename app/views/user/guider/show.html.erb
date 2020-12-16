@@ -22,14 +22,11 @@
                   <!--user-pro-img end-->
                   <div class="name-guider">
                     <h3><%= @guider.name %></h3>
-                    <button type="button" class="btn btn-light border mt-2">
-                      <i class="fas fa-rss text-secondary"></i>
-                      Theo dõi
-                    </button>
-                    <button type="button" class="btn btn-light border mt-2">
-                      <i class="fab fa-facebook-messenger"></i>
-                      Nhắn tin
-                    </button>
+                    <% if @current_user.following?(@guider) %>
+                      <%= render 'user/follow/unfollow' %>
+                    <% else %>
+                      <%= render 'user/follow/follow' %>
+                    <% end %>
                   </div>
                   <ul class="social_links">
                     <li><i class="fas fa-birthday-cake text-secondary"></i> Ngày sinh: <%= @guider.profile.date_of_birth.strftime('%d/%m/%Y') %></li>
@@ -37,7 +34,7 @@
                     <li><i class="fas fa-map-marker-alt text-secondary"></i> Sống tại: <%= @guider.profile.live_at %></li>
                     <li><i class="fas fa-suitcase text-secondary"></i> Làm việc: <%= @guider.profile.work %></li>
                     <li><i class="fas fa-heart text-secondary"></i> Sở thích: <%= @guider.profile.interests %></li>
-                    <li><i class="fas fa-rss text-secondary"></i> 229 người theo dõi</li>
+                    <li><i class="fas fa-rss text-secondary"></i> <%= @guider.followers.count %> người theo dõi</li>
                   </ul>
                 </div>
                 <!--user_profile end-->
