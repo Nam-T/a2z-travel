@@ -32,6 +32,12 @@ Rails.application.routes.draw do
   resources :guider do
     scope module: :guider do
       resources :homepage, controller: 'homepage', only: %i[index] do
+        collection do
+          patch 'journey/:journey_id', to: 'homepage#journey'
+        end
+      end
+
+      resources :history, controller: 'history', only: %i[index] do
       end
     end
   end

@@ -1,13 +1,13 @@
 <div class="post-bar">
   <div class="wordpressdevlp">
-    <%= form_for(journey, url: "/user/#{@current_user.id}/guider/#{journey.guider.id}", remote:true) do |f| %>
+    <%= form_for(journey, url: "/guider/#{@current_guider.id}/homepage/journey/#{journey.id}", remote:true) do |f| %>
       <h3> Tour:</h3>
       <%= f.select :id, journeys.map { |journey| [journey.name, journey.id] }, selected: journey.id %>
     <% end %>
     <p><i class="fas fa-calendar-alt"></i> Tổng thời gian: <%= journey.total_time %> giờ</p>
   </div>
   <% journey.journey_segments.order(stt: :asc).each do |journey_segment| %>
-    <%= render 'user/guider/tour_segment', journey_segment: journey_segment %>
+    <%= render 'guider/homepage/tour_segment', journey_segment: journey_segment   %>
   <% end %>
   <div class="row no-gutters job-status-bar">
     <div class="col-md-6 col-sm-12">

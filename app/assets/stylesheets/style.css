@@ -7200,3 +7200,24 @@ ul#myTab {
 .cp-field h5 .content-info {
 	font-weight: 400;
 }
+
+#journey_id {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 8px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #007bff;
+	border: 1px solid #dee2e6 !important;
+	border-radius: 8px;
+}
+
+.edit_journey {
+	display: flex;
+}
+
+.wordpressdevlp h3 {
+	padding-top: 8px;
+	color: #007bff;
+	font-size: 20px;
+} 

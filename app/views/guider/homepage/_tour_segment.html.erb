@@ -1,0 +1,10 @@
+<h3><%= journey_segment.arrival %></h3>
+<p><i class="far fa-clock"></i> Thời gian: <%= journey_segment.spend_time %> giờ</p>
+<div class="blog-content">
+  <div class="blog-img">
+    <% if journey_segment.tour_images.present? %>
+      <%=image_tag(journey_segment.tour_images.first.image.url, alt: 'Image')%>
+    <% end %>
+  </div>
+  <p><%= journey_segment.content %></p>
+</div>
