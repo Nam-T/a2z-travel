@@ -40,6 +40,10 @@ class Account < ApplicationRecord
     RoomMessage.where('user_id = ? OR guider_id = ?', self.id, self.id)
   end
 
+  def histories
+    History.where('user_id = ? OR guider_id = ?', self.id, self.id)
+  end
+
   private
 
   def roles_valid

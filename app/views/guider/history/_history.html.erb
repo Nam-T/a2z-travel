@@ -1,0 +1,45 @@
+<div class="list-history">
+  <div class="row p-4">
+    <div class="col-md-4">
+      <p><%= history.journey.name %></p>
+      <p>Giá tiền: <%= history.total_money %></p>
+      <p>Trạng thái: 
+        <% case history.status %>
+        <% when 'pending' %>
+        <span class="status-pending">Đang giao dịch</span>
+        <% when 'in_process' %>
+        <span class="status-doing">Đang tiến hành</span>
+        <% when 'finished' %>
+        <span class="status-done">Hoàn thành</span>
+        <% when 'canceled' %>
+        <span class="status-ban">Hủy bỏ</span>
+      <% end %>
+    </p>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="usr_img">
+          <% if history.user.avatar? %>
+            <%=image_tag(history.user.avatar.url, alt: 'Image')%>
+          <% else %>
+            <%=image_tag("guest/guest_man.jpg")%>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <p>User: <%= history.user.name %></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <% case history.status %>
+    <% when 'pending' %>
+    <%# <button class="btn btn-light border text-danger button-ban" type="button"> <i class="fas fa-ban"></i> Hủy</i></button> %>
+    <% when 'in_process' %>
+  <% end %>
+  <div class="time-history"><i class="far fa-clock"></i> Ngày <%= history.created_at.strftime("%d/%m/%Y") %></div>
+</div>
+</div>
+<!--usr-question end-->
+</div>

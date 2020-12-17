@@ -1,1 +1,2 @@
-$(".form-follow").html("<%= escape_javascript(render('user/follow/follow')) %>");
+$(".name-guider").append("<%= escape_javascript(render('user/follow/follow')) %>");
+$($(".name-guider").children()[1]).remove()

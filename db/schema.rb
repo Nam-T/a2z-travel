@@ -72,6 +72,18 @@ ActiveRecord::Schema.define(version: 0) do
     t.index ["user_id"], name: "index_relationships_on_user_id"
   end
 
+  create_table "histories", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "guider_id"
+    t.integer "journey_id"
+    t.integer "status"
+    t.integer "total_money"
+    t.integer "total_member"
+    t.datetime "date_start"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "journey_segments", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "departure"
     t.string "arrival"

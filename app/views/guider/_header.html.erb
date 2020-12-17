@@ -1,0 +1,102 @@
+<header>
+  <div class="container">
+    <div class="header-data">
+      <div class="logo">
+        <%= link_to(image_tag("your-logo.png"), guider_homepage_index_path) %>
+      </div>
+      <!--logo end-->
+      <div class="search-bar">
+        <form>
+          <input type="text" name="search" placeholder="Tìm kiếm...">
+          <button type="submit"><i class="la la-search"></i></button>
+        </form>
+      </div>
+      <!--search-bar end-->
+      <nav>
+        <ul>
+          <li>
+            <%= link_to(guider_homepage_index_path) do %>
+              <span><i class="fas fa-users"></i></span>
+              Lộ trình du lịch
+            <% end %>
+          </li>
+          <li>
+            <%= link_to(guider_history_index_path) do %>
+              <span><i class="fas fa-history"></i></span>
+              Lịch sử
+            <% end %>
+          </li>
+          <li>
+            <%= link_to( class: "not-box-openm") do %>
+              <span><i class="fas fa-comments"></i></span>
+              Chat
+            <% end %>
+            <div class="notification-box msg" id="message">
+              <div class="nt-title">
+                <a href="#" title="">Xóa tất cả</a>
+              </div>
+              <div class="nott-list">
+                <div class="notfication-details">
+                  <div class="noty-user-img">
+                    <img src="images/any.jpg" alt="">
+                  </div>
+                  <div class="notification-info">
+                    <h3><a href="message-all.html" title="">Nam Vũ</a> </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+                    <span>2 min ago</span>
+                  </div>
+                  <!--notification-info -->
+                </div>
+                <div class="notfication-details">
+                  <div class="noty-user-img">
+                    <img src="images/eya.jpg" alt="">
+                  </div>
+                  <div class="notification-info">
+                    <h3><a href="message-all.html" title="">Ngọc Vân</a></h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <span>2 min ago</span>
+                  </div>
+                  <!--notification-info -->
+                </div>
+                <div class="view-all-nots">
+                  <a href="message-all.html" title="">Xem tất cả</a>
+                </div>
+              </div>
+              <!--nott-list end-->
+            </div>
+            <!--notification-box end-->
+          </li>
+        </ul>
+      </nav><!--nav end-->
+      <div class="menu-btn">
+        <a href="#" title=""><i class="fa fa-bars"></i></a>
+      </div>
+      <!--menu-btn end-->
+      <div class="user-account" style="cursor: pointer">
+        <div class="user-info">
+          <% if current_account.avatar? %>
+            <%=image_tag(@current_account.avatar.url, alt: 'Image')%>
+          <% else %>
+            <%=image_tag("guest/guest_man.jpg")%>
+          <% end %>
+          <div style="color: #ffffff; font-size: 14px; margin-top: 8px">
+            <%= current_account.name.split(' ').last %>
+          </div>
+          <i class="la la-sort-down"></i>
+        </div>
+        <div class="user-account-settingss">
+          <ul class="us-links">
+            <li>
+              <%= link_to("Quản lý tài khoản") %>
+            </li>
+            <li>
+              <%= link_to('Đăng xuất', destroy_account_session_path, method: :delete) %>
+            </li>
+          </div>
+          <!--user-account-settingss end-->
+        </div>
+      </div>
+      <!--header-data end-->
+    </div>
+  </header>
+  <!--header end-->

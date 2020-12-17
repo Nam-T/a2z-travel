@@ -83,15 +83,15 @@
                         </div>
                         <div class="col-lg-4">
                           <div class="right-sidebar">
-                            <div class="post-bar">
+                            <%= form_for(History.new ,url: "/user/#{@current_user.id}/payment/order", method: :order, html: {class: 'post-bar'}, remote:true) do |f| %>
                               <div style="display: flex; justify-content: space-between;">
                                 <div style="line-height: 28px;">Ngày xuất phát</div>
-                                <input class="datepicker" data-format="dd/MM/yy" style="width: 90px; text-align: center;"/>
+                                <input class="datepicker" name="history[date_start]" data-format="dd/MM/yy" style="width: 90px; text-align: center;"/>
                               </div>
                               <div style="display: flex; justify-content: space-between; margin-top: 5px;">
                                 <div style="display: flex;">
-                                  <h1 style="margin-right: 5px; line-height: 28px;">2</h1>
-                                  <h2 style="line-height: 28px;">Người lớn</h2>
+                                  <h1 style="margin-right: 5px; line-height: 28px;">Số người:</h1>
+                                  <h2 style="line-height: 28px;">2</h2>
                                 </div>
                                 <div style="width: 90px; display: flex; justify-content: inherit;">
                                   <button class="btn number-button minus-adult btn-general minus">
@@ -102,10 +102,23 @@
                                   </button>
                                 </div>
                               </div>
-                              <div style="margin-top: 5px;">
-                                <button class="btn btn-flat btn-action btn-md btn-block requestButton btn-submit">Xem giá</button>
+                              <div style="display: flex; justify-content: space-between; margin-top: 15px; color: red">
+                                <h1 style="display: inline-block">Tổng tiền: </h1>
+                                <div>
+                                  <h1 style="display: inline-block">5000000</h1>
+                                  <h1 style="display: inline-block">VND</h1>
+                                </div>
                               </div>
-                            </div>
+                              <%= hidden_field_tag :guider_id, @guider.id %>
+                              <%= hidden_field_tag :journey_id, journey.id %>
+                              <div style="margin-top: 10px;" id="btn-book">
+                                <% if History.where(user_id: @current_user.id, guider_id: @guider.id, journey_id: journey.id).present? %>
+                                  <a class="btn btn-flat btn-action btn-md btn-block requestButton btn-submit" style="background: #60c157!important; color: white;">Đang giao dịch</a>
+                                <% else %>
+                                  <button class="btn btn-flat btn-action btn-md btn-block requestButton btn-submit" type="submit">Đặt đơn</button>
+                                <% end %>
+                              </div>
+                            <% end %>
                           </div>
                         </div>
                       </div>

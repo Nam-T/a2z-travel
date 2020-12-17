@@ -2797,7 +2797,7 @@ footer {
 .add-dp input[type='file'] {
 	opacity: 0;
 	padding: 10px 0px 9px;
-	display: none;
+	width: 0px;
 }
 
 .user-pro-img img {
@@ -4732,7 +4732,7 @@ a:hover {
 }
 .cp-field input {
 	height: 40px;
-	padding: 0 40px;
+	padding: 0 8px;
 }
 .cp-field input,
 .cp-field textarea {
@@ -5513,6 +5513,11 @@ a:hover {
 .status-doing {
 	font-size: 14px;
 	color: #00EE00;
+}
+
+.status-pending {
+	font-size: 14px;
+	color: #F29339;
 }
 
 .status-ban {
@@ -7154,3 +7159,90 @@ ul#myTab {
 	font-size: 14px;
 	color: #666666;
 }
+
+/* setting-account */
+.img-setting {
+	position: relative;
+	text-align: center;
+	width: 100%;
+	background-color: #fff;
+	margin-bottom: 20px;
+	padding-top: 16px;
+}
+
+.img-setting img{
+	float: none;
+	width: 30%;
+	border-radius: 50%;
+
+}
+
+.img-setting .add-dp {
+	position: absolute;
+	bottom: 14px;
+	left: 58%;
+}
+
+.name-setting {
+	text-align: center;
+	font-size: 20px;
+}
+
+.name-setting i {
+	cursor: pointer;
+}
+
+.name-setting input {
+	border: 1px solid #e5e5e5;
+	padding: 8px;
+	text-align: center;
+}
+
+#form-editing {
+	display: none;
+}
+
+.cp-field h5 .content-info {
+	font-weight: 400;
+}
+
+#journey_id {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 8px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #007bff;
+	border: 1px solid #dee2e6 !important;
+	border-radius: 8px;
+}
+
+.edit_journey {
+	display: flex;
+}
+
+.wordpressdevlp h3 {
+	padding-top: 8px;
+	color: #007bff;
+	font-size: 20px;
+} 
+
+.job-tp svg {
+	color: #666666;
+    position: absolute;
+    top: 9px;
+    right: 15px;
+    font-size: 14px;
+}
+
+.custom-right-sidebar {
+	position: fixed;
+	top: 0px;
+	width: 237.48px; 
+}
+
+.custom-search {
+	position: fixed;
+	top: 0px;
+	width: 247.5px; 
+} 
