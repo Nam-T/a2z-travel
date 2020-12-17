@@ -67,6 +67,12 @@ Rails.application.routes.draw do
 
       resources :messenger, controller: 'messenger', only: %i[index create show] do
       end
+
+      resources :payment, controller: 'payment', only: %i[index update] do
+        collection do
+          post 'order', to: 'payment#order'
+        end
+      end
     end
   end
 end
