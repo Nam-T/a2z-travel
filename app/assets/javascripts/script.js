@@ -303,8 +303,24 @@ $(".user-info").on("click", function(){$("#users").hide();
 
     });
 
-
-
+    function fixedPrice(index) {
+        console.log(index)
+        if (index < 0){
+            $(".right-sidebar" ).addClass( "custom-right-sidebar" );
+        }
+        else {
+            $(".right-sidebar" ).removeClass( "custom-right-sidebar" );
+        }
+      }
+      
+      $(function() {
+        var eTop = $('.right-sidebar').offset().top; 
+        fixedPrice(eTop - $(window).scrollTop());
+      
+        $(window).scroll(function() { 
+            fixedPrice(eTop - $(window).scrollTop());
+        });
+      });
 
 
 });

@@ -7176,3 +7176,23 @@ ul#myTab {
 	color: #007bff;
 	font-size: 20px;
 }
+
+.job-tp svg {
+	color: #666666;
+    position: absolute;
+    top: 9px;
+    right: 15px;
+    font-size: 14px;
+}
+
+.custom-right-sidebar {
+	position: fixed;
+	top: 0px;
+	width: 237.48px; 
+}
+
+.custom-search {
+	position: fixed;
+	top: 0px;
+	width: 247.5px; 
+}
