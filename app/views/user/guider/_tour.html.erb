@@ -1,10 +1,8 @@
 <div class="post-bar">
   <div class="wordpressdevlp">
-    <a href="">
-      <h2><%= journey.name %></h2>
-    </a>
     <%= form_for(journey, url: "/user/#{@current_user.id}/guider/#{journey.guider.id}", remote:true) do |f| %>
-      <%= f.select :id, journeys.map { |journey| [journey.name, journey.id] }, selected: journey.id %>
+     <h3> Tour:</h3> 
+     <%= f.select :id, journeys.map { |journey| [journey.name, journey.id] }, selected: journey.id %>
     <% end %>
     <p><i class="fas fa-calendar-alt"></i> Tổng thời gian: <%= journey.total_time %> giờ</p>
   </div>

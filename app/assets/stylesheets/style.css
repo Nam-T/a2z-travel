@@ -1875,7 +1875,7 @@ main {
 
 .right-sidebar .button-book {
 	border-radius: 18px;
-	background-color: #CC0000 ;
+	background-color: #cc0000;
 	padding: 12px;
 	margin-top: 8px;
 	color: #fff;
@@ -3783,7 +3783,7 @@ a:hover {
 	padding: 10px 15px;
 }
 
-.company-title{
+.company-title {
 	display: flex;
 	justify-content: space-between;
 	background-color: #fff;
@@ -3795,7 +3795,7 @@ a:hover {
 	padding: 8px;
 }
 
-.title-table h3{
+.title-table h3 {
 	color: #000000;
 	font-weight: 600;
 	font-size: 18px;
@@ -4636,7 +4636,7 @@ a:hover {
 }
 
 .acc-setting table tbody tr:nth-child(even) {
-	background: #EEEEEE
+	background: #eeeeee;
 }
 
 .notbar {
@@ -4697,7 +4697,7 @@ a:hover {
 }
 
 .save-stngs ul li .btn-save-setting {
-	background-color: #00DD00;
+	background-color: #00dd00;
 	color: #fff;
 	border-color: transparent;
 }
@@ -5450,7 +5450,8 @@ a:hover {
 	margin-bottom: 16px;
 }
 
-.list-history p, h3{
+.list-history p,
+h3 {
 	font-weight: 600;
 	padding: 4px;
 }
@@ -5507,17 +5508,17 @@ a:hover {
 
 .status-done {
 	font-size: 14px;
-	color: #3366FF;
+	color: #3366ff;
 }
 
 .status-doing {
 	font-size: 14px;
-	color: #00EE00;
+	color: #00ee00;
 }
 
 .status-ban {
 	font-size: 14px;
-	color: #FF0000	;
+	color: #ff0000;
 }
 /* =========== navigation ============ */
 
@@ -7153,4 +7154,25 @@ ul#myTab {
 	line-height: 24px;
 	font-size: 14px;
 	color: #666666;
+}
+
+#journey_id {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 8px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #007bff;
+	border: 1px solid #dee2e6 !important;
+	border-radius: 8px;
+}
+
+.edit_journey {
+	display: flex;
+}
+
+.wordpressdevlp h3 {
+	padding-top: 8px;
+	color: #007bff;
+	font-size: 20px;
 }
