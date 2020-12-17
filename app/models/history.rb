@@ -1,7 +1,7 @@
 class History < ApplicationRecord
   belongs_to :user, class_name: "Account"
   belongs_to :guider, class_name: "Account"
-  has_one :journey
+  belongs_to :journey
   validates :user_id, presence: true
   validates :guider_id, presence: true
 

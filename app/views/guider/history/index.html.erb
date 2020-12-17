@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <%= render 'guider/header' %>
+  <section class="forum-page">
+    <div class="container">
+      <div class="company-title">
+        <h3>Lịch sử</h3>
+      </div>
+      <!--company-title end-->
+      <div class="forum-questions-sec">
+        <div class="row">
+          <div class="col-lg-12">
+            <% @histories.each do |history| %>
+              <%= render 'history', history: history %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <!--forum-questions-sec end-->
+    </div>
+  </section>
+  <!--forum-page end-->
+</div>
+<!--theme-layout end-->

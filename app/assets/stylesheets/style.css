@@ -5515,6 +5515,11 @@ a:hover {
 	color: #00EE00;
 }
 
+.status-pending {
+	font-size: 14px;
+	color: #F29339;
+}
+
 .status-ban {
 	font-size: 14px;
 	color: #FF0000	;
